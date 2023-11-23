@@ -31,6 +31,8 @@ a{
     height: 100vh;
     width: 100vw;
     display: flex; 
+
+    
     
 
 }
@@ -40,7 +42,7 @@ a{
 .navbar{
     height: 100%;
     width: 20%;
-   
+    
     background-color: white;
 }
 .navbar img{
@@ -78,6 +80,10 @@ a{
     height: 1.5vw;
     margin-right: 0.5vw;
 }
+.phoneprofilenav{
+    display: none;
+}
+
 .profile,.balance,.notification,.aorders,.mbids,.chats,.hcentre,.rules{
     display: flex;
    
@@ -244,6 +250,7 @@ display: block;
 }
 .iframe{
     width: 80%;
+    
    
     display: flex;
 
@@ -514,17 +521,16 @@ iframe{
    
  
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    scrollbar-width: thin;
+   
     
    
 }
 .orderinid{
     display: none;
 }
-.avbody::-webkit-scrollbar{
+/*.avbody::-webkit-scrollbar{
     width: thin;
-}
+}*/
 .aordersh1{
   
     margin: auto;
@@ -751,12 +757,20 @@ iframe{
 .searchbar select:focus{
     outline-width: 0vw;
 }
+.searchicon{
+    display: none;
+}
 
 .candidatelist{
     
     margin: auto;
     width: 93%;
     margin-top: 2vw;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    
+    height: 30vw;
+   
 }
 .candidatecarrier{
  
@@ -837,6 +851,8 @@ iframe{
     font-size: 1vw;
     color: hsla(4,0%,0%,0.5);
 }
+
+
 .approvalr{
     border-left: 1px solid hsla(188,47%,20%,0.5);
     height: 4vw;
@@ -1734,6 +1750,8 @@ iframe{
     line-height: 2.5vw;
     color: hsla(4,0%,0%,0.9);
     font-size: 1.2vw;
+    font-family: sans-serif;
+    
     
 }
 .skillst{
@@ -3113,7 +3131,7 @@ label {
    background-color: white;
     font-family: 'Roboto', sans-serif;
     overflow-y: scroll;
-    scrollbar-width: none;
+    
     height: 1;
    
     -ms-overflow-style: none;
@@ -3255,9 +3273,7 @@ label {
     display: flex;
     
 }
-.jbody::-webkit-scrollbar{
-    display: none;
-}
+
 .jbsidebar{
     width: 20%;
    
@@ -3425,6 +3441,7 @@ select{
     margin-left: 3%;
     margin-top: 2vw;
     font-size: 1.2vw;
+    padding: 1vw;
  }
  #responsibility{
     margin-left: 25%;
@@ -4372,3 +4389,440 @@ select{
 .oops-description {
     color: #666;
 }
+
+
+
+
+
+@media (max-width:500px){
+
+    .main{
+    
+        height: 100vh;
+        width: 100vw;
+        display: block; 
+    
+        
+        
+    
+    }
+    .navbar{
+        height: 32vw;
+        width: 100%;
+        background-color: white;
+        
+    }
+
+    .navbar #employerdlogo{
+        height: 14vw;
+        margin-left: 5%;
+        margin-top: 5vw;
+        padding-bottom: 1vw;
+    }
+
+    .status{
+        display: flex;
+        border: 1px solid hsl(37,48%,84%);
+        height: 10vw;
+    }
+
+    .status button{
+        height: 6vw;
+        width: 40vw;
+        margin-top: 2vw;
+        margin-left: 17%;
+        font-size: 3.2vw;
+        font-weight: 600;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .status button img{
+        height: 4vw;
+        margin-right: 2vw;
+    }
+
+
+    .navbutton{
+        display: block;
+         height: 30px;
+         background: transparent;
+         width: 30px;
+         margin-left: 1%;
+         margin-top: 1vw;
+         border-radius: 5px;
+        
+     
+        
+        }
+        
+        .nav{
+           
+            height: 2px;
+            display: block;
+            background-color : hsl(188,47%,20%);
+            width: 25px;
+            margin: 6px;
+            border-radius: 20px;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        
+        }
+ 
+         
+        .navbutton.active .nav:nth-child(2){
+         opacity: 0;
+        }
+        .navbutton.active .nav:nth-child(1){
+         transform:translateY(8px)   rotate(45deg);
+        }
+        .navbutton.active .nav:nth-child(3){
+         transform:translateY(-8px)  rotate(-45deg);
+        }
+
+        #ebeta{
+            display:  none;
+        }
+
+
+        .phoneprofilenav{
+            
+            height: 10vw;
+            width: 18vw;
+            display: flex;
+            margin-left: 13%;
+            
+        }
+
+        .logo-container {
+            display: flex;
+            background-color: hsl(188,47%,20%);
+            overflow: hidden;
+            border-radius: 50%;
+            /*border: 1px solid black;*/
+            width: 8vw; /* Adjust the size of the circle */
+            height: 8vw; 
+            margin-top: 1vw;
+            justify-content: center;
+            align-items: center;/* Adjust the size of the circle */
+        }
+        
+        #logo {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 50%;
+        }
+
+        #gthanphone{
+            height: 6vw;
+            transform: rotate(90deg);
+            margin-top: 2vw;
+        }
+        #myprofile{
+  
+            display: none;
+            
+         }
+
+         .phonenavmenu{
+            border: 1px solid hsla(4,0%,0%,0.2);
+            width: 48%;
+           /* height: 80vw;*/
+            position: absolute;
+            background-color: white;
+            margin-left: 1%;
+            margin-top: 1vw;
+            overflow: hidden;
+            height: 0vw;
+            opacity: 0;
+         }
+
+         .balance,.notification,.aorders,.mbids,.chats,.hcentre,.rules{
+            display: flex;
+            
+            height: 7vw;
+            cursor: pointer;
+           
+           
+            margin-top: 2vw;
+        }
+
+
+        .balance,.notification, .chats{
+            display: none;
+
+        }
+        .navbar img{
+            height: 5vw;
+            margin-left: 7%;
+            margin-top: 1vw;
+            padding-bottom: 1vw;
+        }
+        .profile p,.balance p,.notification p,.aorders p,.mbids p,.chats p,.hcentre p,.rules p{
+    
+            width: 25vw;
+           
+            margin-left: 5%;
+            margin-top: 2vw;
+            font-size: 3.2vw;
+        
+            
+            
+        
+        }
+        #rb{
+            font-size: 3.2vw;
+            
+            width: 30vw;
+        }
+        .iframe{
+            width: 100%;
+            
+        
+        }
+        .avbody{
+            
+            width: 100%;
+
+           
+        }
+        
+        .aordersh1{
+  
+            margin: auto;
+            width: 93%;
+            margin-top: 5vw;
+            font-size: 5vw;
+        
+        }
+        .ordersnav .h31{
+             
+            height: 4vw;
+            margin-top: 2vw;
+            font-size: 3.2vw;
+            
+        }
+        .ordersnav{
+           
+            height: 7vw;
+            
+        
+        }
+        .searchbar{
+            height: 9vw;
+           
+        }
+
+
+
+        .searchbar select{
+            height: 5vw;
+            margin-top: 2vw;
+            width: 35vw;
+            font-size: 2.3vw;
+            border-radius: 1vw;
+            text-align: center;
+            
+         
+        }
+        .searchbar label{
+            margin-left: 2%;
+            margin-top: 3vw;
+            font-size: 2.5vw;
+            
+        }
+        .searchbar .search{
+           
+            display: none;
+        }
+        .searchicon{
+            height: 5vw;
+            margin-left: 40%;
+            margin-top: 2vw;
+            display: block;
+            
+
+        }
+        .candidatelist{
+    
+            margin: auto;
+            width: 93%;
+            margin-top: 2vw;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            
+            height: 110vw;
+            
+           
+        }
+        .candidatecarrier{
+ 
+            height: 52vw;
+            margin-top: 4vw;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.1);
+            
+           
+        
+            
+        }
+        .cadpsec{
+   
+            width: 100%;
+            
+        }
+        .cadprfmain{
+    
+            display: block;
+            height: 27vw;
+            border-bottom: 1px solid hsla(4,0%,0%,0.2);
+        
+        }
+        .divprfshow{
+            display: flex;
+           /* border-bottom: 1px solid hsla(188,47%,20%,0.5);*/
+            width: 100%;
+            height: 18vw;
+            cursor: pointer;
+           
+           
+        }
+
+        .cadprofile{
+            height: 10vw;
+             width: 10vw;
+             background-color: hsla(188,47%,20%,0.2);
+             border-radius: 50%;
+             margin-left: 3%;
+             margin-top: 1vw;
+         
+             
+             
+         }
+         .cadprofile img{
+            height: 10vw;
+            width: 10vw;
+            
+        }
+     
+.js{
+    
+    width: 50%;
+}
+#cadph3{
+  
+     margin-left: 2%;
+     margin-top: 1.2vw;
+     font-size: 1.5vw;
+     height: 0.5vw;
+}
+
+#cadp{
+   
+    margin-left: 2%;
+    font-size: 2vw;
+    color: hsla(4,0%,0%,0.5);
+   
+}
+
+
+
+
+
+.online{
+    border: 2px solid white;
+    height: 1.2vw;
+    width: 1.2vw;
+    margin-left: 90%;
+    margin-top: -5.2vw;
+    background-color: green;
+    border-radius: 50%;
+    display: none;
+    /*position: absolute;*/
+    
+}
+.js{
+   
+    width: 50%;
+}
+#cadph3{
+  
+     margin-left: 5%;
+     margin-top: 3vw;
+     font-size: 3.5vw;
+     height: 0.5vw;
+}
+
+#cadp{
+   
+    margin-left: 5%;
+    font-size: 2vw;
+    color: hsla(4,0%,0%,0.5);
+}
+
+
+
+/*****/
+
+
+.approvalr{
+    border-left: 1px solid hsla(188,47%,20%,0.5);
+    height: 7vw;
+    width: 50%;
+    margin-top: 1vw;
+    margin-left: 5%;
+}
+#aprateh3{
+  
+    margin-left: 3%;
+    margin-top: 0.5vw;
+    font-size: 3.5vw;
+    height: 0.4vw;
+    
+}
+.approvalr p{
+  
+    margin-left: 2%;
+    font-size: 3vw;
+   
+}
+.cadabout{
+    border-left: 1px solid transparent;
+    width: 100%;
+    display: block;
+   
+    
+}
+.cadabout h3{
+    margin-top: 2vw;
+   
+    font-size: 3.3vw;
+    height: 1vw;
+    margin-left: 5%;
+    
+    
+}
+#cadaboutp{
+    
+    margin-top: 0.1vw;
+    font-size: 3.1vw;
+    width: 65vw;
+    margin-left: 5%;
+}
+.cadabout button{
+    margin-top: 0vw;
+    height: 7vw;
+     width: 80vw;
+    font-weight: 600;
+    font-size: 3.5vw;
+    
+    margin-top: 3vw;
+    margin-left: 6%;
+ 
+}
+      
+
+}
+

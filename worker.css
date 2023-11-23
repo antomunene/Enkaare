@@ -2516,6 +2516,7 @@ background-color: hsla(188,47%,20%,0.8);
 
 }
 
+
 .auth1st p{
     
     margin-top: 0.5vw;
@@ -2557,6 +2558,7 @@ background-color: hsla(188,47%,20%,0.8);
     width: 93%;
     margin-top: 2vw;
     color: hsla(4,0%,0%,0.6);
+    font-size: 1.2vw;
 }
 .sinputc,.sinputc2{
     border: 1px solid hsla(4,0%,0%,0.3);

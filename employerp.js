@@ -54,7 +54,7 @@ const getCookie = (name) => {
 
 // Function to delete a cookie
 function deleteCookie(name) {
-  const domain = ".enkaare.co"; // Replace with your actual domain
+  const domain = ".127.0.0.1:5501"; // Replace with your actual domain
   const pastDate = new Date(0).toUTCString();
   try {
     document.cookie = `${name}=; expires=${pastDate}; path=/; domain=${domain}`;
@@ -63,6 +63,7 @@ function deleteCookie(name) {
     console.error(`Error deleting cookie: ${name}`, error);
   }
 }
+
 
 
 
@@ -1817,6 +1818,7 @@ let active = () => {
         console.log(err);
       } else {
         let mjarray = d;
+        
 
         let myjpostscarrier =
           document.getElementsByClassName("jobspostlist")[0];
@@ -1824,8 +1826,21 @@ let active = () => {
         for (let i = 0; i < mjarray.length; i++) {
           let jbid = mjarray[i].job_id;
           let tit = mjarray[i].job_title;
-          let dar = mjarray[i].time_posted;
+          let posteddate = mjarray[i].time_posted;
           let appli = mjarray[i].submits;
+
+          console.log(posteddate);
+
+          
+
+/*
+          TypeError: postedDate.getTime is not a function
+    at calculateJobExpiration (employerp.js:1842:80)
+    at employerp.js:1873:23*/
+
+        
+          
+        
 
           let jbdiv = document.createElement("div");
           let jbcontents = ` <div class="jobspcarrier">
@@ -4089,7 +4104,7 @@ let terminateinterviews = (interviewid) => {
 };
 
 let interviewasums = () => {
- let jbid = getCookie("jobpostid");
+ let jbid = sessionStorage.getItem("jobpostid");
  let formdata= new FormData();
     formdata.append("job_id",jbid);
     
@@ -4133,7 +4148,7 @@ let interviewasums = () => {
 };
 
 let shortlistsum = () => {
-  let jbid = getCookie("jobpostid");
+  let jbid = sessionStorage.getItem("jobpostid");
   let formdata= new FormData();
   formdata.append("job_id",jbid);
 
@@ -4460,13 +4475,17 @@ let statename;
       let validatescontinuation=()=>{
           if(jobtype.value===""){
               jobtype.style.borderBottomColor="red";
+              alert('Please fill out all required fields');
 
           }else if(currency.value===""){
               currency.style.borderBottomColor="red";
+              alert('Please fill out all required fields');
           }else if(rate.value===""){
               rate.style.borderBottomColor="red";
+              alert('Please fill out all required fields');
           }else if(summary.value===""){
               summary.style.borderColor="red";
+              alert('Please fill out all required fields');
           }else{
               //here is all where form data is collected
               
@@ -4523,12 +4542,14 @@ let statename;
 
     if(country.value===""){
       country.style.borderBottomColor='red';
+      alert('Please fill out all required fields');
     }else
       
       if(usstate.value==="" && canadaprovince.value==="" && provstate.value===""){
           usstate.style.borderBottomColor="red";
           provstate.style.borderBottomColor="red";
           canadaprovince.style.borderBottomColor="red";
+          alert('Please fill out all required fields');
       }else if(usstate.value !=""){
           statename=usstate.value;
           validatescontinuation()
@@ -4589,7 +4610,7 @@ let statename;
 
      
          clicks=1;
-         let rt=  sessionStorage.setItem("jobposttype");
+         let rt=  sessionStorage.getItem("jobposttype");
 
      if(v==="none" || v==="similar" ||v===null){
          const formdata = new FormData();
@@ -4767,6 +4788,7 @@ let listeancountry = () => {
 };
 
 let inputreset = () => {
+
   let usstate = document.getElementById("usstates");
   let canadaprovince = document.getElementById("canadaprovence");
   let provstate = document.getElementById("state");
@@ -4774,6 +4796,7 @@ let inputreset = () => {
   let currency = document.getElementById("currency");
   let rate = document.getElementById("rate");
   let summary = document.getElementById("jbsummary");
+   
 
   currency.style.borderBottomColor = "hsla(4,0%,0%,0.5)";
   jobtype.style.borderBottomColor = "hsla(4,0%,0%,0.5)";
@@ -5364,7 +5387,7 @@ let ssavename = () => {
       body: formdata,
     };
 
-    let fetchChangeName = fetch(
+    let f = fetch(
       `${baseUrl}/changeename`,
       options
     ).catch((err) => {
@@ -5771,7 +5794,7 @@ let settingdata = () => {
     body: formdata,
   };
   let fetchSetting = fetch(
-    `${baseUrl}e/esettingdata`,
+    `${baseUrl}/esettingdata`,
     options
   ).catch((err) => {
     console.log(err);

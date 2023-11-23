@@ -8,7 +8,7 @@ const options = {
   headers: {
     "Authorization": `Bearer ${token}`,
     "Access-Control-Allow-Credentials": true,
-    "Access-Control-Allow-Origin": "https://enkaare.co",
+     "Access-Control-Allow-Origin": "https://enkaare.co",
     "Access-Control-Allow-Headers":
       "Origin, X-Requested-With, Content-Type, Accept, authorization",
     "Access-Control-Allow-Methods": "POST",
@@ -21,7 +21,7 @@ const options = {
 //   method: "POST",
 //   headers: {
 //     "Access-Control-Allow-Credentials": true,
-//     "Access-Control-Allow-Origin": "https://enkaare.co",
+//    "Access-Control-Allow-Origin": "https://enkaare.co",
 //     "Access-Control-Allow-Headers":
 //       "Origin, X-Requested-With, Content-Type, Accept, authorization",
 //     "Access-Control-Allow-Methods": "POST",
@@ -62,16 +62,17 @@ const getCookie = (name) => {
 // Function to delete a cookie
 
 function deleteCookie(name) {
-  const domain = ".enkaare.co"; // Replace with your actual domain
+//  const domain = ".127.0.0.1:5501"; // Replace with your actual domain
   const pastDate = new Date(0).toUTCString();
   try {
-    document.cookie = `${name}=; expires=${pastDate}; path=/; domain=${domain}`;
-    console.log(`Deleted cookie: ${name}`);
+    document.cookie = `${name}=; expires=${pastDate}; path=/`;
+   // console.log(`Deleted cookie: ${name}`);
   } catch (error) {
-    console.error(`Error deleting cookie: ${name}`, error);
-  }
+    console.error(`Error deleting cookie: ${name}`, error)
 }
 
+
+}
 
 
 
@@ -92,7 +93,7 @@ let updateonlinestatus=(status)=>{
     headers: {
       "Authorization": `Bearer ${token}`,
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": baseUrl,
+       "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -379,7 +380,7 @@ let availableorders = () => {
 
     headers: {
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://enkaare.co",
+     "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -393,7 +394,7 @@ let availableorders = () => {
   //https://half-geode-roundworm.glitch.me/api
 
   let f = fetch(`${baseUrl}/allorders`, optionWithFormData).catch((err) => {});
- // loader[0].classList.add("addedloader");
+ loader[0].classList.add("addedloader");
 
   f.then((res) => res.json()).then((d) => {
     const {pnotcomplte} = d;
@@ -547,7 +548,7 @@ let suminter = () => {
 
     headers: {
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://enkaare.co",
+     "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -592,7 +593,7 @@ let displainterviewslots = () => {
     method: "POST",
     headers: {
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://enkaare.co",
+     "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -612,11 +613,12 @@ let displainterviewslots = () => {
     }
   );
 
-  // document.querySelector(".interloader").style.display="flex";
+   document.querySelector(".interloader").style.display="flex";
 
   f.then((res) => res.json()).then((d) => {
     const {nointer} = d;
-    // document.querySelector(".interloader").style.display="none";
+    
+     document.querySelector(".interloader").style.display="none";
 
     if (nointer) {
       let interviewcontainer = document.getElementsByClassName(
@@ -781,7 +783,7 @@ let displainterviewslots = () => {
             method: "POST",
             headers: {
               "Access-Control-Allow-Credentials": true,
-              "Access-Control-Allow-Origin": "https://enkaare.co",
+             "Access-Control-Allow-Origin": "https://enkaare.co",
               "Access-Control-Allow-Headers":
                 "Origin, X-Requested-With, Content-Type, Accept, authorization",
               "Access-Control-Allow-Methods": "POST",
@@ -845,7 +847,7 @@ function invitedorders() {
        method: "POST",
       headers: {
          "Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "https://enkaare.co",
+       "Access-Control-Allow-Origin": "https://enkaare.co",
        "Access-Control-Allow-Headers":
          "Origin, X-Requested-With, Content-Type, Accept, authorization",
        "Access-Control-Allow-Methods": "POST",
@@ -862,6 +864,8 @@ function invitedorders() {
 
   f.then((res) => res.json()).then((d) => {
     let orderarray = d;
+    console.log(d);
+
 
     if (d.length === 0) {
       let orderlist = document.getElementsByClassName("orderslist")[0];
@@ -998,7 +1002,7 @@ let profload = () => {
     method: "POST",
     headers: {
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://enkaare.co",
+     "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -1233,7 +1237,7 @@ let profload = () => {
 
       headers: {
         "Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "https://enkaare.co",
+       "Access-Control-Allow-Origin": "https://enkaare.co",
         "Access-Control-Allow-Headers":
           "Origin, X-Requested-With, Content-Type, Accept, authorization",
         "Access-Control-Allow-Methods": "POST",
@@ -1318,7 +1322,7 @@ let profload = () => {
         method: "POST",
         headers: {
           "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Origin": "https://enkaare.co",
+         "Access-Control-Allow-Origin": "https://enkaare.co",
           "Access-Control-Allow-Headers":
             "Origin, X-Requested-With, Content-Type, Accept, authorization",
           "Access-Control-Allow-Methods": "POST",
@@ -1366,7 +1370,7 @@ let profileeditbutton = () => {
     method: "POST",
     headers: {
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://enkaare.co",
+     "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -2000,7 +2004,7 @@ let orderdetails = (order_id) => {
     method: "POST",
     headers: {
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://enkaare.co",
+     "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -2065,21 +2069,21 @@ let orderdetails = (order_id) => {
   const sformdata = new FormData();
   sformdata.append("job_id", jbid);
   sformdata.append("type", "any");
-  //   const soptions = {
-  //     method: "POST",
-  //     headers: {
-  //       "Access-Control-Allow-Credentials": true,
-  //       "Access-Control-Allow-Origin": "https://www.enkaare.com",
-  //       "Access-Control-Allow-Headers":
-  //         "Origin, X-Requested-With, Content-Type, Accept, authorization",
-  //       "Access-Control-Allow-Methods": "POST",
-  //       withCredentials: true,
-  //     },
-  //     credentials: "include",
+     const soptions = {
+       method: "POST",
+       headers: {
+         "Access-Control-Allow-Credentials": true,
+         "Access-Control-Allow-Origin": "https://www.enkaare.com",
+         "Access-Control-Allow-Headers":
+           "Origin, X-Requested-With, Content-Type, Accept, authorization",
+         "Access-Control-Allow-Methods": "POST",
+         withCredentials: true,
+       },
+       credentials: "include",
 
-  //     body: sformdata,
-  //   };
-  // https://1ed2-105-231-144-76.ngrok.io/api'
+      body: sformdata,
+     };
+// https://1ed2-105-231-144-76.ngrok.io/api'
 
   //https://half-geode-roundworm.glitch.me/api
 
@@ -2183,7 +2187,7 @@ let orderdetails = (order_id) => {
       });
     } else if (e.target.innerHTML === "Accept") {
       //   let logged = localStorage.getItem("userloged");
-      let logged = getCookie("userlogged");
+      let logged = getCookie("userloged");
       let formdata = new FormData();
       formdata.append("job_id", jbid);
       formdata.append("user_id", logged);
@@ -3098,6 +3102,7 @@ let emailcode = () => {
     loader.style.display = "none";
     email.value = "";
     const {sent} = d;
+    
     if (sent) {
       emaildis2.style.display = "none";
       emaildis3.style.display = "block";
