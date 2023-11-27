@@ -2175,14 +2175,17 @@ iframe{
 
 .jbremin{
    
-    width: 40%;
+    width: 45%;
     margin-left: 6%;
+   
     
 }
 .jbp1,.jbp2{
    
     margin-top: 0.1vw;
     font-size: 1.2vw;
+    
+    
 }
 .jbp1{
     height: 0.4vw;
@@ -4391,7 +4394,7 @@ select{
 }
 
 
-
+/*
 
 
 @media (max-width:500px){
@@ -4500,12 +4503,12 @@ select{
             background-color: hsl(188,47%,20%);
             overflow: hidden;
             border-radius: 50%;
-            /*border: 1px solid black;*/
-            width: 8vw; /* Adjust the size of the circle */
+            
+            width: 8vw; 
             height: 8vw; 
             margin-top: 1vw;
             justify-content: center;
-            align-items: center;/* Adjust the size of the circle */
+            align-items: center;
         }
         
         #logo {
@@ -4529,7 +4532,7 @@ select{
          .phonenavmenu{
             border: 1px solid hsla(4,0%,0%,0.2);
             width: 48%;
-           /* height: 80vw;*/
+           
             position: absolute;
             background-color: white;
             margin-left: 1%;
@@ -4682,7 +4685,7 @@ select{
         }
         .divprfshow{
             display: flex;
-           /* border-bottom: 1px solid hsla(188,47%,20%,0.5);*/
+       
             width: 100%;
             height: 18vw;
             cursor: pointer;
@@ -4740,7 +4743,7 @@ select{
     background-color: green;
     border-radius: 50%;
     display: none;
-    /*position: absolute;*/
+    
     
 }
 .js{
@@ -4764,7 +4767,7 @@ select{
 
 
 
-/*****/
+
 
 
 .approvalr{
@@ -4826,3 +4829,4 @@ select{
 
 }
 
+*/ 

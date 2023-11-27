@@ -1854,7 +1854,7 @@ iframe{
 }
 .saveb{
     height: 2.5vw;
-    margin-left: 85%;
+    margin-left: 50vw;
     margin-top: 0.5vw;
     cursor: pointer;
     background-color: green;
@@ -1862,6 +1862,8 @@ iframe{
     font-weight: 700;
     border: 1px solid green;
     border-radius: 0.3vw;
+    font-size: 1.2vw;
+    width: 11vw;
 
 }
 .saveb:hover{
