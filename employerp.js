@@ -54,7 +54,7 @@ const getCookie = (name) => {
 
 // Function to delete a cookie
 function deleteCookie(name) {
-  const domain = ".127.0.0.1:5501"; // Replace with your actual domain
+  const domain = ".enkaare.co"; // Replace with your actual domain
   const pastDate = new Date(0).toUTCString();
   try {
     document.cookie = `${name}=; expires=${pastDate}; path=/; domain=${domain}`;
@@ -83,7 +83,7 @@ let updateonlinestatus=(status)=>{
     headers: {
       "Authorization": `Bearer ${token}`,
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": baseUrl,
+      "Access-Control-Allow-Origin": "https://enkaare.co",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -1819,6 +1819,7 @@ let active = () => {
       } else {
         let mjarray = d;
         
+        
 
         let myjpostscarrier =
           document.getElementsByClassName("jobspostlist")[0];
@@ -1826,11 +1827,11 @@ let active = () => {
         for (let i = 0; i < mjarray.length; i++) {
           let jbid = mjarray[i].job_id;
           let tit = mjarray[i].job_title;
-          let posteddate = mjarray[i].time_posted;
+          let posteddate = mjarray[i].expiration;
           let appli = mjarray[i].submits;
 
-          console.log(posteddate);
-
+          
+          
           
 
 /*
@@ -1864,7 +1865,7 @@ let active = () => {
             <section class="jbbids">
                 <div class="jbremin">
                     <p class="jbp1">Applications</p>
-                    <p class="jbp2">Expires in 17 days</p>
+                    <p class="jbp2">Expires in ${posteddate.remaining.value+" "+posteddate.remaining.unit}</p>
     
                 </div>
                 <div class="jb3bs">
@@ -1874,7 +1875,7 @@ let active = () => {
                        <section></section>
     
                     </div>
-                    <div class="jbquicklinks">
+                    <div class="jbquicklinksa">
                         <div class="jbwd">
                             <img src="/images/cancel.png" alt="">
                             <p>Cancel Job</p>
@@ -2136,6 +2137,8 @@ cbutton(sessionStorage.getItem('value'));
 //VIEW JOBS START HERE*/
 
 let viewjobsapplications = () => {
+
+
   let jobtitle = document.getElementById("jbtitlep1");
   let jjobid = document.getElementById("jbordrid");
   let jbappid = document.getElementById("jbappsid");
@@ -2178,11 +2181,15 @@ let viewjobsapplications = () => {
 
   f.then((res) => res.json())
     .then((d) => {
-      let mjarray = d;
+      let mjarray = [d];
+      console.log(d)
+     
+      let posteddate = mjarray[0].expiration;
 
+      
       jobtitle.innerHTML = mjarray[0].job_title;
       applicationssum.innerHTML = mjarray[0].submits;
-      daysremaining.innerHTML = mjarray[0].time_posted;
+      daysremaining.innerHTML = posteddate.remaining.value+" "+posteddate.remaining.unit;
 
       //candidates who have applyed start here
       viewallaplicants();
@@ -2244,6 +2251,8 @@ let jbid = sessionStorage.getItem("jobpostid");
   loader[0].classList.add("addedloader");
   f.then((res) => res.json()).then((d) => {
     loader[0].classList.remove("addedloader");
+
+   
     if (d.length === 0) {
       let candidates = document.getElementsByClassName("candidatelist")[0];
       var candidate = document.createElement("div");
@@ -3042,6 +3051,8 @@ let shortlist = () => {
       for (let i = 0; i < shortlist.length; i++) {
         let addtoshortlist = shortlist[i];
         addtoshortlist.addEventListener("click", (e) => {
+
+          console.log("Yessssss")
           let value =
             addtoshortlist.parentElement.parentElement.parentElement
               .parentElement.firstElementChild.innerHTML;
@@ -3049,9 +3060,46 @@ let shortlist = () => {
           let bclicked = addtoshortlist.children[1].innerHTML;
           if (bclicked === "Remove") {
             let jbid = sessionStorage.getItem("jobpostid");
+              const formdata=new FormData()
+             formdata.append("job_id",jbid);
+             formdata.append("user_id",value);
+          
+          
+          
+           const options ={
+          
+              method: 'POST',
+              headers:{
+               "Acces-Control-Allow-Credentials":true,
+               "Access-Control-Allow-Origin": "https://enkaare.co",
+               "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, authorization",
+               "Access-Control-Allow-Methods": "POST",
+                  withCredentials:true
+          
+              },
+             credentials: 'include',
+          
+          
+              body: formdata,
+             
+          };
+          // https://1ed2-105-231-144-76.ngrok.io/api'
+          
+          //https://half-geode-roundworm.glitch.me/api
+          
+          let f= fetch('https://yielding-dented-amusement.glitch.me/removeshortlist',options).catch(err =>{
             
+          
+          });
+          loader[0].classList.add("addedloader");
+          f.then(res=>res.json()).then(d=>{
 
-            const formdata = new FormData();
+           
+              loader[0].classList.remove("addedloader");
+              window.location.reload();
+              
+          })
+
             
           } else {
           }
@@ -3717,8 +3765,8 @@ function selectslots() {
           }
         });
 
-        console.log(`Start time:  ${selectedStartDateTime}`);
-        console.log(`End time:  ${selectedEndDateTime}`);
+       // console.log(`Start time:  ${selectedStartDateTime}`);
+        //console.log(`End time:  ${selectedEndDateTime}`);
       }
     } else {
       document.getElementById("timeEnd").style.border = "1px solid red";
@@ -4176,6 +4224,8 @@ let shortlistsum = () => {
 
   f.then((res) => res.json())
     .then((d) => {
+
+      
       const {sum} = d;
       if (sum === 0) {
         //do nothing
@@ -4189,6 +4239,108 @@ let shortlistsum = () => {
       console.log(err);
     });
 };
+
+
+//here is the function that operates closing of jobs
+
+
+const modal = document.getElementById('cancelModal');
+const overlay = document.getElementById('overlay');
+
+function openModal() {
+  modal.style.display = 'block';
+  overlay.style.display = 'block';
+}
+
+function closeModal() {
+  modal.style.display = 'none';
+  overlay.style.display = 'none';
+}
+
+function cancelJob() {
+
+  closeModal();
+}
+
+
+
+function openSpinner() {
+  const spinnerContainer = document.createElement('div');
+  spinnerContainer.className = 'spin-container';
+
+  const spinner = document.createElement('div');
+  spinner.className = 'spinner';
+
+  spinnerContainer.appendChild(spinner);
+  modal.appendChild(spinnerContainer);
+}
+
+function closeSpinner() {
+  const spinnerContainer = document.querySelector('.spin-container');
+  spinnerContainer.parentNode.removeChild(spinnerContainer);
+}
+
+
+function canceljob(){
+  openModal()
+
+}
+function continueJob() {
+  let jbid = sessionStorage.getItem("jobpostid");
+  let formdata= new FormData();
+  formdata.append("job_id",jbid);
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Access-Control-Allow-Credentials": true,
+      "Access-Control-Allow-Origin": "https://enkaare.co",
+      "Access-Control-Allow-Headers":
+        "Origin, X-Requested-With, Content-Type, Accept, authorization",
+      "Access-Control-Allow-Methods": "POST",
+      withCredentials: true,
+    },
+    credentials: "include",
+
+    body: formdata,
+  };
+
+  let f = fetch(
+    `${baseUrl}/deletejob`,
+    options
+  ).catch((err) => {
+    console.log(err);
+  });
+  openSpinner();
+
+  f.then(res=>res.json()).then(d=>{
+
+     if(d.result){
+      closeSpinner();
+      closeModal() 
+      sessionStorage.removeItem("jobpostid");
+      window.open('http://127.0.0.1:5500/myjoposts.html', '_blank');
+      window.close()
+
+
+     
+
+     }
+
+    
+
+  })
+
+  
+  
+ 
+}
+
+
+
+
+
+
 
 //profile load CANDIDTAE PROFILE
 let profload = () => {

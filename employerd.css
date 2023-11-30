@@ -2233,7 +2233,11 @@ iframe{
     background-color: white;
     border-radius: 0.2vw;
     position: absolute;
+    
    
+}
+.jbquicklinksa{
+    display: none;
 }
 
 .jbwd{
@@ -2294,7 +2298,8 @@ iframe{
     border: 1px solid hsla(188,47%,20%,0.4);
     height: 2.5vw;
     width: 2.5vw;
-    margin-left: 5%;
+    margin-left: 65%;
+   /* margin-left: 5%;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2318,6 +2323,10 @@ iframe{
     border-radius: 0.3vw;
     margin-top: 0.5vw;
     cursor: pointer;
+}
+
+.interviewdates,.avaislots,.icominginte{
+    display: none;
 }
 .interviewdates{
     width: 17.5vw;
@@ -2929,6 +2938,82 @@ label {
 
 
 
+  
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-left: 4%;
+  }
+  
+  .modal-content {
+    padding: 1vw;
+  }
+  .modal-content p{
+    font-size: 1.2vw;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .buttons button {
+    margin: 0 1vw;
+    padding: 0.5vw 0.5vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+  }
+  
+ /* Add this style for the spinner container */
+.spin-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+ 
+    width: 72.6vw;
+    margin-top: -8.5vw;
+    background-color: hsla(188,47%,20%,0.1);
+  }
+  
+  /* Update the style for the spinner to fill its container */
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 3.5vw;
+    height: 3.5vw;
+    animation: spin 1s linear infinite;
+    /* Adjust margin to center the spinner */
+    margin: auto;
+  }
+  
+  /* Rest of your existing styles... */
+  
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+
+
+
+
+
 
 
 
@@ -3025,15 +3110,22 @@ label {
     height: 1.5vw;
     margin-left: 30%;
     font-weight: 700;
-    cursor: pointer;
+    cursor:default;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.3vw;
-    color: white;
+    color: hsla(0,0%,100%,0.5);
+    
    
   
     background-color: green;
+}
+.hirebutton:hover{
+    cursor: no-drop; /* Changes cursor to a red circle with a cross line */
+    /* Additional styles for hover effect */
+    background-color: #ddd;
+    color: #777;
 }
 
 .canclejobsec{

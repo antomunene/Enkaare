@@ -21,7 +21,7 @@ const options = {
 //   method: "POST",
 //   headers: {
 //     "Access-Control-Allow-Credentials": true,
-//    "Access-Control-Allow-Origin": "https://enkaare.co",
+//     "Access-Control-Allow-Origin": "https://yielding-dented-amusement.glitch.me",
 //     "Access-Control-Allow-Headers":
 //       "Origin, X-Requested-With, Content-Type, Accept, authorization",
 //     "Access-Control-Allow-Methods": "POST",
@@ -64,7 +64,7 @@ const getCookie = (name) => {
 
 
 function deleteCookie(name) {
-  const domain = ".127.0.0.1:5500"; // Replace with your actual domain
+  const domain = ".enkaare.co"; // Replace with your actual domain
   const pastDate = new Date(0).toUTCString();
   try {
     document.cookie = `${name}=; expires=${pastDate}; path=/; domain=${domain}`;
@@ -73,7 +73,6 @@ function deleteCookie(name) {
     console.error(`Error deleting cookie: ${name}`, error);
   }
 }
-
 
 
 
@@ -380,7 +379,7 @@ let availableorders = () => {
 
     headers: {
       "Access-Control-Allow-Credentials": true,
-     "Access-Control-Allow-Origin": "https://enkaare.co",
+      "Access-Control-Allow-Origin": "https://yielding-dented-amusement.glitch.me",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -548,7 +547,7 @@ let suminter = () => {
 
     headers: {
       "Access-Control-Allow-Credentials": true,
-     "Access-Control-Allow-Origin": "https://enkaare.co",
+      "Access-Control-Allow-Origin": "https://yielding-dented-amusement.glitch.me",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -593,7 +592,7 @@ let displainterviewslots = () => {
     method: "POST",
     headers: {
       "Access-Control-Allow-Credentials": true,
-     "Access-Control-Allow-Origin": "https://enkaare.co",
+      "Access-Control-Allow-Origin": "https://yielding-dented-amusement.glitch.me",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -783,7 +782,7 @@ let displainterviewslots = () => {
             method: "POST",
             headers: {
               "Access-Control-Allow-Credentials": true,
-             "Access-Control-Allow-Origin": "https://enkaare.co",
+              "Access-Control-Allow-Origin": "https://yielding-dented-amusement.glitch.me",
               "Access-Control-Allow-Headers":
                 "Origin, X-Requested-With, Content-Type, Accept, authorization",
               "Access-Control-Allow-Methods": "POST",
@@ -847,7 +846,7 @@ function invitedorders() {
        method: "POST",
       headers: {
          "Access-Control-Allow-Credentials": true,
-       "Access-Control-Allow-Origin": "https://enkaare.co",
+        "Access-Control-Allow-Origin": "https://yielding-dented-amusement.glitch.me",
        "Access-Control-Allow-Headers":
          "Origin, X-Requested-With, Content-Type, Accept, authorization",
        "Access-Control-Allow-Methods": "POST",
