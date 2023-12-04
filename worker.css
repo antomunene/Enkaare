@@ -242,15 +242,13 @@ display: block;
 }
 .iframe{
     width: 80%;
-   
+
+  
     display: flex;
 
 }
-iframe{
-    width: 100%;
-    height: 100vh;
-    
-}
+
+
 .message{
     border: 1px solid black;
     height: 95vh;
@@ -578,10 +576,12 @@ iframe{
    width: 80vw;
    background-color: hsl(36,43%,94%);
    
+   
  
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    scrollbar-width: thin;
+  /*  overflow-x: hidden;
+    scrollbar-width: thin;*/
+    
     
    
 }
@@ -795,6 +795,8 @@ iframe{
             padding-right: 1%;
             overflow-y: scroll;
             scrollbar-width: none;
+            padding-bottom: 1vw;
+            
         }
 
         .interloader{
@@ -857,10 +859,10 @@ iframe{
             opacity: 1;
 
         }
-        .interview-container:hover{
+      /*  .interview-container:hover{
             height: 20vw;
             opacity: 1;
-        }
+        }*/
 
         /* Style for each row */
         .row {
@@ -1004,8 +1006,17 @@ iframe{
 
         }
         
-
-
+/*
+        .avtopbar{
+         
+            position: fixed;
+            width: 80%;
+            background-color: hsl(228,14%,93%);
+            margin-top: -12vw;
+            padding-bottom: 2vw;
+            border-bottom:1px solid hsla(4,0%,0%,0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }*/
 
 
 .searchbar{
@@ -1017,6 +1028,7 @@ iframe{
     background-color: white;
     border-radius: 0.3vw;
     display: flex;
+    
 }
 .searchbar select{
     height: 2.5vw;
@@ -1067,12 +1079,29 @@ iframe{
 }
 .orderslist{
    
-  
+  overflow-y: scroll;
     margin: auto;
     width: 93%;
     margin-top: 1vw;
+    padding-bottom: 1vw;
+   
+    height: 28vw;
+    overflow-x: hidden;
+   
+    scrollbar-width: thin;
+    
+    scrollbar-color: #888 transparent;
    
 }
+
+.orderslist::-webkit-scrollbar {
+    width: 0.4vw; 
+  }
+  .orderslist::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 0.7vw;
+  }
+  
 .order{
   
     margin: auto;

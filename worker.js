@@ -2498,6 +2498,15 @@ let myapporders = () => {
   f.then((res) => res.json()).then((d) => {
     loader[0].classList.remove("addedloader");
     if (d.length === 0) {
+
+      let orderlist = document.getElementsByClassName("jobsappcarrier")[0];
+      var order = document.createElement("div");
+      var orderitems = `<div class="empty-message">
+    <div class="empty-icon">&#128533;</div>
+    <div class="empty-text">Oops! No Results Found</div>
+    `;
+      order.innerHTML = orderitems;
+      orderlist.append(order);
     } else {
       let orderarray = d;
 
