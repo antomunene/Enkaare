@@ -577,14 +577,28 @@ display: block;
    background-color: hsl(36,43%,94%);
    
    
- 
+    overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
   /*  overflow-x: hidden;
     scrollbar-width: thin;*/
+    scrollbar-width: thin;
+    
+scrollbar-color: #888 transparent;
     
     
    
 }
+
+
+
+.avbody::-webkit-scrollbar {
+width: 0.4vw; 
+}
+.avbody::-webkit-scrollbar-thumb {
+background-color: #c0c0c0;
+border-radius: 0.7vw;
+}
+
 
 .orderinid{
     display: none;
@@ -1079,28 +1093,29 @@ display: block;
 }
 .orderslist{
    
-  overflow-y: scroll;
+  
     margin: auto;
     width: 93%;
     margin-top: 1vw;
     padding-bottom: 1vw;
    
-    height: 28vw;
-    overflow-x: hidden;
+   
+   
+}
+
+/*
    
     scrollbar-width: thin;
     
     scrollbar-color: #888 transparent;
    
-}
-
 .orderslist::-webkit-scrollbar {
     width: 0.4vw; 
   }
   .orderslist::-webkit-scrollbar-thumb {
     background-color: #c0c0c0;
     border-radius: 0.7vw;
-  }
+  }*/
   
 .order{
   
