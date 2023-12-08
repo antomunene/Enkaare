@@ -232,12 +232,9 @@ label{
      font-size: 5.5vw;
      border-radius: 15vw;
      height: 11vw;
-     border: 1px solid hsl(40,26%,68%);
-     background-color: hsl(40,26%,68%);
+     
     }
-    .submit:hover{
-        background-color: hsl(188,47%,20%);
-    }
+    
     .signup{
         font-size: 4vw;
         margin-left: 25%;
