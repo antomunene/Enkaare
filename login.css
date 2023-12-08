@@ -232,6 +232,9 @@ label{
      font-size: 5.5vw;
      border-radius: 15vw;
      height: 11vw;
+     background-color: hsl(188,47%,20%);
+     border: 1px solid hsl(188,47%,20%);
+     cursor: pointer;
      
     }
     
