@@ -97,6 +97,7 @@ form{
     margin: auto;
     margin-top: 4vw;
      font-family: 'Roboto', sans-serif;
+     margin-bottom: 2vw;
 }
 h2{
     font-size: 2.5vw;
@@ -119,6 +120,8 @@ h2{
     border-radius: 0.3vw;
     color: white;
     background-color: hsl(188,47%,20%);
+    padding: 0.4vw;
+    border-radius: 0.5vw;
 }
 .input{
     display: block;
@@ -170,25 +173,32 @@ input:focus{
     margin-left: 4%;
 }
 select{
-    width: 25vw;
-    height: 2.5vw;
+    width: 25.5vw;
+    height: 2.7vw;
     margin-top: 2.5vw;
     margin-left: 6%;
     font-size: 1.2vw;
     border-radius: 0.1vw;
     background-color: white;
+    border-radius: 0.3vw;
+    border: 1px solid black;
+    outline: none;
     
   
 }
 select:focus{
     outline-width: none;
+    outline: none;
 }
+select::-moz-focus-inner {
+    border: 0;
+  }
 form a{
     text-decoration: none;
     color: hsl(188,47%,20%);
 }
 form a:hover{
-    color: brown;
+    color: hsla(44,0%,100%,0.4);
 }
 .submit{
     width: 30vw;
@@ -320,10 +330,11 @@ margin-top: 4.5%;
   border: 1px solid black;
     height: 2.6vw;
     margin-top: 2.5vw;
-    width: 24.8vw;
+    width: 25vw;
     display: flex;
     border-radius: 1%;
     overflow-x: hidden;
+    border-radius: 0.3vw;
 }
 .realpcode{
     
@@ -591,6 +602,7 @@ margin-top: 4.5%;
     }
     .loginquiz{
         font-size: 3vw;
+        padding: 1vw;
     }
     input{
         width: 68vw;
@@ -804,6 +816,7 @@ margin-top: 4.5%;
     #country{
         margin-left: 0%;
         width: 69.5vw;
+
     }
     #country:focus{
         outline: none;

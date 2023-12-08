@@ -1092,11 +1092,11 @@ let displaypoptions =()=>{
      firstname.innerHTML=d[1].first_name;
      secondname.innerHTML=d[1].last_name;
      jobtitle.innerHTML=d[1].professional_title;
-     payrate.innerHTML=payr[1]+"/h";
-     payrate1.innerHTML=payr[1]+"/hour";
+     payrate.innerHTML=payr[0]+payr[1]+"/h";
+     payrate1.innerHTML=payr[0]+payr[1]+"/hour";
  
     
-     location.innerHTML=d[1].city+","+d[1].country;
+     location.innerHTML=d[1].city+", "+d[1].country;
      experience.innerHTML=d[1].experience_in_years +" years";
      aboutme.innerHTML=d[1].about;
      workh.innerHTML=d[1].availability;

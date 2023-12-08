@@ -1556,12 +1556,14 @@ let orderdetails = () => {
 
       jobtitle.innerHTML = orderarray[0].job_title;
       name.innerHTML = orderarray[0].company_name;
-      city.innerHTML = orderarray[0].state_province + " " + orderarray[0].city;
+      city.innerHTML =" "+ orderarray[0].state_province + ", " + orderarray[0].city;
       time_posted.innerHTML = time;
       poster[0].innerHTML = orderarray[0].first_name + ",";
       depart[0].innerHTML = orderarray[0].department;
       country.innerHTML = orderarray[0].country;
-      pay_rate.innerHTML = orderarray[0].pay;
+      let formattedPay=orderarray[0].pay.split(',')
+      pay_rate.innerHTML = formattedPay[0]+formattedPay[1]+formattedPay[2];
+      
       benefits.innerHTML = orderarray[0].benefit;
       type.innerHTML = orderarray[0].job_type;
       about.innerHTML = orderarray[0].summary;

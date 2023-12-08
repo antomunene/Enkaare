@@ -519,12 +519,19 @@ iframe{
    width: 80vw;
    background-color: hsl(36,43%,94%);
    
- 
+    overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
    
     
    
 }
+.avbody::-webkit-scrollbar {
+    width: 5px; 
+  }
+  .avbody::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 1vw;
+  }
 .orderinid{
     display: none;
 }
@@ -766,20 +773,20 @@ iframe{
     margin: auto;
     width: 93%;
     margin-top: 2vw;
-    overflow-y: scroll;
+   
     scrollbar-width: thin;
     
-    height: 28vw;
+    
    
 }
-
+/*
 .candidatelist::-webkit-scrollbar {
     width: 5px; 
   }
   .candidatelist::-webkit-scrollbar-thumb {
     background-color: #c0c0c0;
     border-radius: 0.7vw;
-  }
+  }*/
 .candidatecarrier{
  
     height: 6vw;
@@ -1218,14 +1225,14 @@ iframe{
      display: flex;
      align-items: center;
      justify-content: center;
-     color: white;
+     color: black;
       position: absolute;
-      margin-left: 90%;
+      margin-left: 82%;
       width: 1vw;
       height: 1vw;
       margin-top: 1.3vw;
       cursor: pointer;
-       font-weight: 700;
+       font-size: 1.7vw;
       
  }
  .cancleedit:hover{
@@ -4350,7 +4357,7 @@ select{
     margin-left: 65%;
     margin-top: -30vw;
     cursor: pointer;
-    font-size: 1.1vw;
+    font-size: 1.6vw;
 }
 .contactsupport #suucanncel:hover{
     color: red;
