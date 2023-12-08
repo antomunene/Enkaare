@@ -240,7 +240,7 @@ header{
 .propsp{
    background-color: hsla(45, 44%, 80%,0.8);
 
-   background: linear-gradient(to bottom,hsla(45, 44%, 80%,0.7),hsla(45, 44%, 80%,0.7),hsla(37,42%,94%,0.7));
+   background: linear-gradient(to bottom,hsla(45, 44%, 80%,0.7),hsla(45, 44%, 80%,0.7),hsla(37,42%,94%));
    padding-bottom: 4vw;
    
 }
@@ -500,7 +500,7 @@ header{
 .bakcolor{
 
    /* background: linear-gradient(to bottom, hsla(37,42%,94%,1), hsla(37,42%,94%,0.5), hsla(37,42%,94%,0.1));*/
-    background-color: hsla(37,42%,94%,0.7);
+    background-color: hsla(37,42%,94%);
 }
 
 
