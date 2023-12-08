@@ -78,6 +78,7 @@ function deleteCookie(name) {
 
 
 
+
 //here it code to update candidate everytime they are online 
 let updateonlinestatus=(status)=>{
 
@@ -2199,7 +2200,7 @@ let displaypoptions =()=>{
     
     let orderarray =d
    
-    let time;
+    let time=orderarray[0].posted_date.split(',')[0]
   /*  if(parseInt(orderarray[0].time_posted) >60){
         time=Math.trunc(parseInt(orderarray[0].time_posted )/60)+" hours";
         
@@ -2215,15 +2216,6 @@ let displaypoptions =()=>{
  
  
  
-    if (parseInt(orderarray[0].time_posted)>= 1440) {
-     const days = Math.floor(parseInt(orderarray[0].time_posted) / 1440); // Calculate days
-    time=days +" days"
-   } else if (parseInt(orderarray[0].time_posted) >= 60) {
-     const hours = Math.floor(parseInt(orderarray[0].time_posted) / 60); // Calculate hours
-    time= hours +" hours"
-   } else {
-     time=orderarray[0].time_posted+" minutes";
-   }
  
     let payy=orderarray[0].pay.split(",");
     jobtitle.innerHTML=orderarray[0].job_title;

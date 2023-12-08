@@ -1545,14 +1545,8 @@ let orderdetails = () => {
     .then((d) => {
       let orderarray = d;
 
-      let time;
-      if (parseInt(orderarray[0].time_posted) > 60) {
-        time = Math.trunc(parseInt(orderarray[0].time_posted) / 60) + " hours";
-      } else if (Math.trunc(parseInt(orderarray[0].time_posted) / 24) > 0) {
-        time = Math.trunc(parseInt(orderarray[0].time_posted) / 24) + " days";
-      } else {
-        time = orderarray[0].time_posted + " minutes";
-      }
+      let time=orderarray[0].posted_date.split(',')[0]
+      
 
       jobtitle.innerHTML = orderarray[0].job_title;
       name.innerHTML = orderarray[0].company_name;
@@ -4542,6 +4536,8 @@ if(comornot==="no"){
 
  
 }else{
+  sessionStorage.setItem("jobposttype", "none");
+  
   window.open("/postjob.html", "_blank")
 }
 }
@@ -4777,6 +4773,7 @@ let statename;
          formdata.append("benefit",bnfits.value);
          formdata.append("job_type",jobtype.value);  
          formdata.append("summary",summary.value);
+        
          formdata.append("responsb",responsibility.value);  
          formdata.append("skills",skills);
          formdata.append("c","s"); 
@@ -4847,6 +4844,7 @@ let statename;
          formdata.append("benefit",bnfits.value);
          formdata.append("job_type",jobtype.value);  
          formdata.append("summary",summary.value);
+        
          formdata.append("responsb",responsibility.value);  
          formdata.append("skills",skills);
          formdata.append("c","e");  
@@ -5014,13 +5012,14 @@ let editpost = () => {
   var w = window.open("/postjob.html", "_system");
 };
 let editp = () => {
+  
   let loader = document.getElementsByClassName("loader");
   let jbid = sessionStorage.getItem("jobpostid");
    
 
   let postjobtitle = document.getElementById("jbfph3");
   postjobtitle.innerHTML = "Edit Job";
-
+  let country= document.getElementById("country");
   let details = document.getElementsByClassName("pjorderdetails");
   let title = document.getElementById("title");
   let company = document.getElementById("company");
@@ -5078,6 +5077,7 @@ let editp = () => {
     rate.value = payvalues[2];
     company.value = d[0].company_name;
     department.value = d[0].department;
+    country.value=d[0].country;
   });
   const sformdata = new FormData();
   sformdata.append("job_id", jbid);
@@ -5125,6 +5125,8 @@ let editp = () => {
     addskill();
     loader[0].classList.remove("addedloader");
   });
+
+  
 };
 
 // HERE IS THE FUNCTION TO CREATE NEW JOB

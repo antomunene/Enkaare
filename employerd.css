@@ -758,7 +758,10 @@ iframe{
     width: 17vw;
 }
 .search input:focus{
-    outline-width: 0vw;
+    
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
 
 .searchbar select:focus{
