@@ -733,11 +733,7 @@ border-radius: 0.7vw;
    
 }
 
-.emoji {
-    font-size: 2.5vw;
-    margin-bottom: 1vw;
-    margin-top: 0.1vw;
-}
+
 
 .messagepp {
     margin: 0;
@@ -746,6 +742,7 @@ border-radius: 0.7vw;
     font-style: italic;
     margin: auto;
     width: 95%;
+    margin-top: 2vw;
 }
 
 
@@ -1283,8 +1280,8 @@ border-radius: 0.7vw;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.empty-icon {
-    font-size: 4vw;
+#empty-icon {
+     height: 6vw;
     color: #3498db;
     margin-bottom: 20px;
 }
@@ -1748,6 +1745,7 @@ border-radius: 0.7vw;
     font-size: 1.2vw;
     width: 28.8vw;
     font-family: 'Roboto', sans-serif;
+    padding: 1vw;
 }
 .experineces{
     border-bottom:transparent;

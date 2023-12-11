@@ -403,7 +403,7 @@ let availableorders = () => {
       let orderlist = document.getElementsByClassName("orderslist")[0];
       var order = document.createElement("div");
       var orderitems = `<div class="empty-message">
-    <div class="empty-icon">&#128533;</div>
+    <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
     <div class="empty-text">Oops! No Results Found</div>
     `;
       order.innerHTML = orderitems;
@@ -871,7 +871,7 @@ function invitedorders() {
       let orderlist = document.getElementsByClassName("orderslist")[0];
       var order = document.createElement("div");
       var orderitems = `<div class="empty-message">
-          <div class="empty-icon">&#128533;</div>
+          <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
           <div class="empty-text">Oops! No Results Found</div>
           `;
       order.innerHTML = orderitems;
@@ -2494,7 +2494,7 @@ let myapporders = () => {
       let orderlist = document.getElementsByClassName("jobsappcarrier")[0];
       var order = document.createElement("div");
       var orderitems = `<div class="empty-message">
-    <div class="empty-icon">&#128533;</div>
+    <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
     <div class="empty-text">Oops! No Results Found</div>
     `;
       order.innerHTML = orderitems;

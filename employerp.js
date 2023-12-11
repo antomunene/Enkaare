@@ -2253,7 +2253,7 @@ let jbid = sessionStorage.getItem("jobpostid");
       let candidates = document.getElementsByClassName("candidatelist")[0];
       var candidate = document.createElement("div");
       var carditems = `<div class="empty-message">
-        <div class="empty-icon">&#128533;</div>
+        <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
         <div class="empty-text">Oops! No Results Found</div>
        
     </div>`;
@@ -2702,7 +2702,7 @@ let shortlist = () => {
       let candidates = document.getElementsByClassName("candidatelist")[0];
       var candidate = document.createElement("div");
       var carditems = `<div class="empty-message">
-        <div class="empty-icon">&#128533;</div>
+        <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
         <div class="empty-text">Oops! No Results Found</div>
        
     </div>`;
@@ -3267,7 +3267,7 @@ let invites = () => {
       let candidates = document.getElementsByClassName("candidatelist")[0];
       var candidate = document.createElement("div");
       var carditems = `<div class="empty-message">
-        <div class="empty-icon">&#128533;</div>
+        <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
         <div class="empty-text">Oops! No Results Found</div>
        
     </div>`;
