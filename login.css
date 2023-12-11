@@ -74,6 +74,9 @@ input:focus{
     font-size: 1.2vw;
    
 }
+input::placeholder {
+    color: hsla(37,42%,94%,0.7); /* Replace with your desired color */
+}
 label{
     font-size: 1vw;
 }
