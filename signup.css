@@ -5,6 +5,8 @@ body{
     overflow: scroll;
 
 }
+
+
 .emailvericationdivi{
     
     height: 0vh;
@@ -53,6 +55,7 @@ body{
     height: 7vw;
     border:  1px solid hsla(4,0%,0%,0.5);
     font-size: 1.3vw;
+    
 }
 .vermaessage{
     font-family: 'Roboto', sans-serif;
