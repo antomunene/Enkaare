@@ -1,7 +1,10 @@
 const form=document.querySelector(".form");
-const vericationForm=document.querySelector(".emailvericationdivi");
+const vericationForm=document.querySelectorAll(".emailvericationdivi");
 const email=document.querySelector("#email");
 const verificationInputs = document.querySelectorAll('.codes');
+const vbloader=document.getElementsByClassName("bloader");
+const loader =document.getElementsByClassName("loader");
+const alerti =document.querySelector(".warnmessage");
 
 
 
@@ -15,36 +18,19 @@ let random=(min=10000, max =99999)=>{
 
 const randomCode=random();
 
-const maxLength = 1;
 
-verificationInputs.forEach((input, index) => {
-  input.addEventListener('input', (event) => {
-    const value = event.target.value;
-
-    if (value.length >= maxLength) {
-      if (index < verificationInputs.length - 1) {
-        verificationInputs[index + 1].focus();
-      } else {
-        // Last input reached, you can perform any action here (e.g., submit the form)
-          if(getVerificationCode() !=rcode){
-            verificationInputs[0].style.border="1px solid red";
-            verificationInputs[1].style.border="1px solid red";
-            verificationInputs[2].style.border="1px solid red";
-            verificationInputs[3].style.border="1px solid red";
-            verificationInputs[4].style.border="1px solid red";
-          }else{
-
-    // Here you send the verication data to the candidate
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
 
     const emailValue=email.value.trim();
-    const vercationCode=randomCode;
+    const vericationCode=randomCode;
        
        
         const formdata = new FormData();
         
        
         formdata.append("email", emailValue);
-        formdata.append("vericationCode", vercationCode);
+        formdata.append("vericationCode", vericationCode);
         //formdata.append("dbvalues", dbvalues);
        
       
@@ -77,6 +63,20 @@ verificationInputs.forEach((input, index) => {
     loader[0].classList.add("addedloader");
    
 fetchVerifyEmail.then(res => res.json()).then(d =>{
+
+    const{codeSent,emailDoesntExist}=d;
+
+    //Here is where you work with the response that's come from the backend
+
+    if(codeSent){
+        //Here  you display code verication form 
+        vericationForm.classList.add("addedcodep");
+
+    }else if(emailDoesntExist){
+        //alert the user email doesn't exist
+        
+        alerti.innerHTML="Email does not exist!"
+    }
    
    
   
@@ -92,9 +92,34 @@ fetchVerifyEmail.then(res => res.json()).then(d =>{
     
        }
 });
+    
+})
+
+const maxLength = 1;
+
+verificationInputs.forEach((input, index) => {
+  input.addEventListener('input', (event) => {
+    const value = event.target.value;
+
+    if (value.length >= maxLength) {
+      if (index < verificationInputs.length - 1) {
+        verificationInputs[index + 1].focus();
+      } else {
+        // Last input reached, you can perform any action here (e.g., submit the form)
+          if(getVerificationCode() !=rcode){
+            verificationInputs[0].style.border="1px solid red";
+            verificationInputs[1].style.border="1px solid red";
+            verificationInputs[2].style.border="1px solid red";
+            verificationInputs[3].style.border="1px solid red";
+            verificationInputs[4].style.border="1px solid red";
+          }else{
+
+    // Here you send the verication data to the candidate
+
+    
 
 
-        document.getElementById("form").reset()
+      
           }
         
        
