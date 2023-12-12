@@ -5,6 +5,7 @@ const verificationInputs = document.querySelectorAll('.codes');
 const vbloader=document.getElementsByClassName("bloader");
 const loader =document.getElementsByClassName("loader");
 const alerti =document.querySelector(".warnmessage");
+const emailInput=document.querySelector(".inneremailinput");
 
 
 
@@ -69,6 +70,7 @@ fetchVerifyEmail.then(res => res.json()).then(d =>{
     //Here is where you work with the response that's come from the backend
 
     if(codeSent){
+        //email verication code success
         //Here  you display code verication form 
         vericationForm.classList.add("addedcodep");
 
@@ -76,6 +78,7 @@ fetchVerifyEmail.then(res => res.json()).then(d =>{
         //alert the user email doesn't exist
         
         alerti.innerHTML="Email does not exist!"
+        emailInput.style.border="1px solid red"
     }
    
    
@@ -106,7 +109,7 @@ verificationInputs.forEach((input, index) => {
         verificationInputs[index + 1].focus();
       } else {
         // Last input reached, you can perform any action here (e.g., submit the form)
-          if(getVerificationCode() !=rcode){
+          if(getVerificationCode() !=randomCode){
             verificationInputs[0].style.border="1px solid red";
             verificationInputs[1].style.border="1px solid red";
             verificationInputs[2].style.border="1px solid red";
@@ -114,7 +117,10 @@ verificationInputs.forEach((input, index) => {
             verificationInputs[4].style.border="1px solid red";
           }else{
 
-    // Here you send the verication data to the candidate
+            //#Danties
+
+    // Here email has been verified the next step would be moving 
+    //to reset passwordpage
 
     
 
@@ -135,3 +141,43 @@ verificationInputs.forEach((input, index) => {
     }
   });
 });
+
+
+
+function getVerificationCode() {
+    let code = '';
+    verificationInputs.forEach((input) => {
+      code += input.value;
+    });
+    return code;
+  }
+
+
+
+
+
+let change =()=>{
+    verificationInputs[0].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[1].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[2].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[3].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[4].style.border="1px solid  hsl(188,47%,20%)";
+    
+   
+}
+
+let oninpuEmail=()=>{
+    alerti.innerHTML=""
+    emailInput.style.border="1px solid hsla(0,0%,0%,0.3)";
+
+    let emilL=document.querySelectorAll(".emaillabel");
+    if(email.value != ""){
+        emilL[0].classList.add("addedlabel");
+
+    }else{
+        emilL[0].classList.remove("addedlabel");
+    }
+
+    
+
+}
