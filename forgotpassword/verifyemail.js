@@ -65,14 +65,19 @@ form.addEventListener('submit',(e)=>{
    
 fetchVerifyEmail.then(res => res.json()).then(d =>{
 
+    //#Danties
+    // Here is where you respond with the data that ypou think that will
+    
+
     const{codeSent,emailDoesntExist}=d;
 
-    //Here is where you work with the response that's come from the backend
-
+    
     if(codeSent){
         //email verication code success
         //Here  you display code verication form 
         vericationForm.classList.add("addedcodep");
+
+        
 
     }else if(emailDoesntExist){
         //alert the user email doesn't exist
@@ -180,4 +185,76 @@ let oninpuEmail=()=>{
 
     
 
+}
+
+
+let resend=()=>{
+    const emailaddress=email.value.trim();
+   
+  const formdata = new FormData();
+
+ 
+  formdata.append("vericationCode",randomCode);
+ 
+  formdata.append("email",emailaddress);
+
+   
+    const options ={
+  
+        method: 'POST',
+        headers:{
+          "Access-Control-Allow-Credentials":true,
+          "Access-Control-Allow-Origin": "https://enkaare.com",
+          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, authorization",
+          "Access-Control-Allow-Methods": "POST",
+          withCredentials:true
+  
+      },
+   
+        body: formdata,
+       
+    };
+   // https://half-geode-roundworm.glitch.me/api'
+    
+    let f= fetch('https://d-amusement.glitch.me/vcode',options).catch(err =>{
+      /*https://yielding-dented-amusement.glitch.me/api*/
+  });
+  vbloader[0].classList.add("adddedbloader");
+  f.then(res => res.json()).then(d =>{
+    vbloader[0].classList.remove("adddedbloader");
+    
+   
+    
+    }).catch(err =>{
+    
+   
+     if(err){
+    // yes();
+    //  alert("Not sent.........the server is down!");
+    
+     }else{
+    
+     }
+    });
+
+}
+
+let getrid=()=>{
+    let codeinputdiv=document.getElementsByClassName("emailvericationdivi");
+   
+    
+    verificationInputs[0].value=""
+    verificationInputs[1].value=""
+    verificationInputs[2].value=""
+    verificationInputs[3].value=""
+    verificationInputs[4].value=""
+    verificationInputs[0].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[1].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[2].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[3].style.border="1px solid  hsl(188,47%,20%)";
+    verificationInputs[4].style.border="1px solid  hsl(188,47%,20%)";
+
+    codeinputdiv[0].classList.remove("addedcodep");
+   
+    
 }
