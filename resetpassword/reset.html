@@ -31,7 +31,7 @@
     <span onclick="getrid()" id="scancelb">&times;</span>
   </div>
 
-    <a class="homelinka" href="https://enkaare.com">
+    <a class="homelinka" href="/login.html">
         <div class="homelink">
           <div class="greaterthanbutton">
         
@@ -64,7 +64,7 @@
 
           <div class="inneremailinput">
             <img src="/images/key.png" alt="">
-            <input oninput="checkpassConstraint()" type="password" name="email" id="password" placeholder="Enter password" required>
+            <input oninput="checkpassConstraint();getrid()" type="password" name="email" id="password" placeholder="Enter password" required>
             
             
           </div>
@@ -75,7 +75,7 @@
           <label for="password2">Confirm password</label>
           <div class="inneremailinput">
             <img src="/images/key.png" alt="">
-            <input oninput="oninpuEmail()" type="password" name="email" id="password2" placeholder="Confirm password" required disabled>
+            <input oninput="getrid()" type="password" name="email" id="password2" placeholder="Confirm password" required disabled>
             
             
           </div>

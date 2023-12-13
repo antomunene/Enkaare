@@ -159,6 +159,8 @@ form{
     border: 1px solid transparent;
     background-color: white;
     
+    margin-top: 0.3vw;
+    
 }
 #password,#password2:valid {
     background-color: transparent;
