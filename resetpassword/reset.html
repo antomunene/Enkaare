@@ -64,25 +64,27 @@
 
           <div class="inneremailinput">
             <img src="/images/key.png" alt="">
-            <input oninput="oninpuEmail()" type="password" name="email" id="password" placeholder="Enter password" required>
+            <input oninput="checkpassConstraint()" type="password" name="email" id="password" placeholder="Enter password" required>
             
             
           </div>
           <span class="guidelance">
-            Must
+            (Must contain at least one number and one uppercase <br />
+            and lowercase letter, and at least 8 or more characters)
           </span>
           <label for="password2">Confirm password</label>
           <div class="inneremailinput">
             <img src="/images/key.png" alt="">
-            <input oninput="oninpuEmail()" type="email" name="email" id="password2" placeholder="Confirm password" required>
+            <input oninput="oninpuEmail()" type="password" name="email" id="password2" placeholder="Confirm password" required disabled>
             
             
           </div>
           
         </div>
-        <span class="warnmessage">Password do not matrch</span>
+        <span class="warnmessage"></span>
         <input class="submitButton" type="submit" value="Submit">
       </form>
     
 </body>
+<script src="/resetpassword/reset.js"></script>
 </html>

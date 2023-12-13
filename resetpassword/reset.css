@@ -187,13 +187,19 @@ label{
     margin-top: 0.5vw;
     color: red;
 }
+.guidelance{
+    margin-top: 0.5vw;
+    font-size: 1vw;
+    color: hsla(0,0%,0%,0.6);
+    display: block;
+}
 .submitButton{
     border: 1px solid hsla(0,0%,0%,0.3);
     width: 35vw;
     margin: auto;
     height: 3.4vw;
     border-radius: 10vw;
-    margin-top: 2vw;
+    margin-top: 3vw;
     text-align: center;
     font-size: 1.3vw;
     font-weight: 700;
@@ -380,11 +386,11 @@ label{
         margin: auto;
         width: 80%;
         text-align: center;
-        margin-top: 20vw;
+        margin-top: 15vw;
     
     }
     .centerimage img{
-        height: 40vw;
+        height: 35vw;
 
         
     }
@@ -400,11 +406,23 @@ label{
     }
 
 
-   
+    label{
+    
+        margin: auto;
+        width: 80%;
+         margin-top: 5vw;
+         display: block;
+         text-align: left;
+         font-family: sans-serif;
+         font-size: 3.2vw;
+         font-weight: 600;
+         color: hsl(188,47%,20%);
+     }
     .inneremailinput{
         width: 85vw;
         height: 10vw;
         border-radius: 15vw;
+        margin-top: 5vw;
     }
     .inneremailinput img{
      height: 7vw;
@@ -428,12 +446,18 @@ label{
         font-size: 2vw;
         margin-top: 2vw;
     }
+    .guidelance{
+        margin-top: 2vw;
+        font-size: 2.4vw;
+        color: hsla(0,0%,0%,0.6);
+        display: block;
+    }
     .submitButton{
         
         width: 85vw;
         height: 10vw;
         border-radius: 15vw;
-        margin-top: 5vw;
+        margin-top: 10vw;
         text-align: center;
         font-size: 3.5vw;
         font-weight: 700;
