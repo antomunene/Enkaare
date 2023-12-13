@@ -65,3 +65,23 @@ function getrid(){
         passwordInput[1].style.border="1px solid hsla(0,0%,0%,0.3)";
         passwordDntMatch.innerHTML=""
 }
+
+const togglePassword1 = document.querySelector('#togglePassword');
+const togglePassword2 = document.querySelector('#togglePassword1');
+  
+
+  togglePassword1.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+    password1.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+togglePassword2.addEventListener('click', function (e) {
+    // toggle the type attribute
+
+    const type2 = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+    password2.setAttribute('type', type2);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});

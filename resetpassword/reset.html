@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
     <link rel="stylesheet" href="/resetpassword/reset.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <meta charset="UTF-8">
@@ -63,6 +67,9 @@
           <label for="password">Enter password</label>
 
           <div class="inneremailinput">
+            <i class="fa fa-eye" aria-hidden="true" id="togglePassword"></i>
+
+            
             <img src="/images/key.png" alt="">
             <input oninput="checkpassConstraint();getrid()" type="password" name="email" id="password" placeholder="Enter password" required>
             
@@ -74,6 +81,8 @@
           </span>
           <label for="password2">Confirm password</label>
           <div class="inneremailinput">
+
+            <i class="fa fa-eye" aria-hidden="true" id="togglePassword1"></i>
             <img src="/images/key.png" alt="">
             <input oninput="getrid()" type="password" name="email" id="password2" placeholder="Confirm password" required disabled>
             
