@@ -40,7 +40,66 @@ function checkPasswords() {
 
         //add this loader after you have sent the request to the server 
         //and remove after the response
-        loader.classList.add('addedloader');
+loader.classList.add('addedloader');
+
+
+        const formdata = new FormData();
+
+    formdata.append("password", password);
+    formdata.append("confirmedPassword", confirmedPassword);
+    formdata.append("userid", 1209); // this would come from the session
+    formdata.append("databaseType", "candidate_profile"); // this would aslo come from session
+
+    //formdata.append("dbvalues", dbvalues);
+    console.log("password: ", confirmedPassword);
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin": "127.0.0.1:3890",
+        "Access-Control-Allow-Headers":
+          "Origin, X-Requested-With, Content-Type, Accept, authorization",
+        "Access-Control-Allow-Methods": "POST",
+        withCredentials: true,
+      },
+
+      body: formdata,
+    };
+
+    let fetchResetPassword = fetch(
+      "http://127.0.0.1:3890/reset-password",
+      options
+    ).catch((err) => {
+      console.log("There is an error fetching data: ", err);
+    });
+
+    loader.classList.add("addedloader");
+
+    fetchResetPassword
+      .then((res) => res.json())
+      .then((d) => {
+        //#Danties
+        // Here is where you respond with the data that ypou think that will
+
+        const {message, affectedrows} = d;
+        //   console.log(codeSent, emailDoesntExist);
+
+        if (affectedrows == 1) {
+          console.log(message);
+        } else {
+          //alert the user user doesn't exist
+          // message = "No user found";
+          alert.innerHTML = "No user found";
+          console.log(message);
+        }
+      })
+      .catch((err) => {
+        console.log("There is an error changing user password: ", err);
+      });
+    //Once the password change is succes respond with success , close the current page and open login.htmlpage
+  }
+
 
 
         
