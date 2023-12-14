@@ -68,7 +68,7 @@ loader.classList.add('addedloader');
     };
 
     let fetchResetPassword = fetch(
-      "http://127.0.0.1:3890/reset-password",
+      "https://dented-amusement.glitch.me/reset-password",
       options
     ).catch((err) => {
       console.log("There is an error fetching data: ", err);
