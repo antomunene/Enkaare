@@ -84,7 +84,7 @@ class Navmenu extends HTMLElement{
            </div>
            <div class="rules navhv">
             <img src="/images/guidelines.png" alt="">
-            <p id="rb">Terms of use</p>
+            <p id="rb">Terms & conditions</p>
 
 
            </div>`
@@ -224,7 +224,7 @@ class CandidateNavmenu extends HTMLElement{
            </div>
            <div class="rules navhv">
             <img src="/images/guidelines.png" alt="">
-            <p id="rb">Terms of use</p>
+            <p id="rb">Terms of service</p>
 
 
            </div>`
