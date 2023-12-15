@@ -845,7 +845,7 @@ let eprofload = () => {
         department.innerHTML = d[1].department;
 
         city.innerHTML = d[1].city;
-        country.innerHTML = d[1].country;
+        country.innerHTML = " "+d[1].country;
 
         summary.innerHTML = d[1].company_summary;
         companyname.innerHTML = d[1].company_name;

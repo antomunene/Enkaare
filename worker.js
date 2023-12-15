@@ -2220,7 +2220,7 @@ let displaypoptions =()=>{
     let payy=orderarray[0].pay.split(",");
     jobtitle.innerHTML=orderarray[0].job_title;
    /* name.innerHTML=orderarray[0].company_name;*/
-    city.innerHTML=orderarray[0].state_province+" "+orderarray[0].city;
+   city.innerHTML=" "+orderarray[0].state_province+", "+orderarray[0].city;
     time_posted.innerHTML=time;
     country.innerHTML=orderarray[0].country;
     pay_rate.innerHTML=payy[0]+payy[1]+payy[2];
