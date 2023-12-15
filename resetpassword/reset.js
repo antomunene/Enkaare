@@ -37,21 +37,26 @@ function checkPasswords() {
         passwordDntMatch.innerHTML="Passwords do not match!"
     } else {
         const password=password1.value.trim()
+       
+
 
         //add this loader after you have sent the request to the server 
         //and remove after the response
-loader.classList.add('addedloader');
+
+        const dbtype= sessionStorage.getItem("dbtype");
+        const userid=sessionStorage.getItem("codesent");
+
 
 
         const formdata = new FormData();
 
     formdata.append("password", password);
-    formdata.append("confirmedPassword", confirmedPassword);
-    formdata.append("userid", 1209); // this would come from the session
-    formdata.append("databaseType", "candidate_profile"); // this would aslo come from session
+   
+    formdata.append("userid", userid); // this would come from the session
+    formdata.append("databaseType", dbtype); // this would aslo come from session
 
     //formdata.append("dbvalues", dbvalues);
-    console.log("password: ", confirmedPassword);
+   
 
     const options = {
       method: "POST",
@@ -68,7 +73,7 @@ loader.classList.add('addedloader');
     };
 
     let fetchResetPassword = fetch(
-      "https://dented-amusement.glitch.me/reset-password",
+      "https://yielding-dented-amusement.glitch.me/forgetpassword",
       options
     ).catch((err) => {
       console.log("There is an error fetching data: ", err);
@@ -79,6 +84,8 @@ loader.classList.add('addedloader');
     fetchResetPassword
       .then((res) => res.json())
       .then((d) => {
+
+       
         //#Danties
         // Here is where you respond with the data that ypou think that will
 
@@ -86,7 +93,14 @@ loader.classList.add('addedloader');
         //   console.log(codeSent, emailDoesntExist);
 
         if (affectedrows == 1) {
-          console.log(message);
+
+          loader.classList.remove("addedloader");
+          form.reset()
+
+          window.open("/login.html","_blank")
+          window.close();
+
+          
         } else {
           //alert the user user doesn't exist
           // message = "No user found";
@@ -110,7 +124,7 @@ loader.classList.add('addedloader');
 
         
     }
-}
+
 
 form.addEventListener("submit",(e)=>{
 
