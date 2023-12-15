@@ -49,7 +49,7 @@ form.addEventListener("submit", (e) => {
   //use this https://github.com/Danities316/Enkaare.git
 
   let fetchVerifyEmail = fetch(
-    "https://dented-amusement.glitch.me/verifyemail",
+    "https://yielding-dented-amusement.glitch.me/verifyemail",
     options
   ).catch((err) => {
     console.log(err);
@@ -60,6 +60,8 @@ form.addEventListener("submit", (e) => {
   fetchVerifyEmail
     .then((res) => res.json())
     .then((d) => {
+
+      
       //#Danties
       // Here is where you respond with the data that ypou think that will
 
@@ -76,7 +78,11 @@ form.addEventListener("submit", (e) => {
         // get user_id and databaseType from the response and store it on the seeion we would need it in
         // the next page
 
-        vericationForm.classList.add("addedcodep");
+        loader[0].classList.remove("addedloader");
+        sessionStorage.setItem("dbtype",databaseType);
+        sessionStorage.setItem("codesent",codeSent);
+
+        vericationForm[0].classList.add("addedcodep");
       } else if (emailDoesntExist) {
         //alert the user email doesn't exist
 
@@ -112,6 +118,12 @@ verificationInputs.forEach((input, index) => {
           verificationInputs[3].style.border = "1px solid red";
           verificationInputs[4].style.border = "1px solid red";
         } else {
+
+          vericationForm[0].classList.add("addedcodep");
+
+          window.open("/resetpassword/reset.html", "_blank")
+          window.close();
+          
           //#Danties
           // Here email has been verified the next step would be moving
           //to reset passwordpage
