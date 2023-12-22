@@ -96,7 +96,7 @@ body{
 form{
     width: 60vw;
     border: 1px solid black;
-    height: 45.5vw;
+    height: 48vw;
     margin: auto;
     margin-top: 4vw;
      font-family: 'Roboto', sans-serif;
@@ -201,7 +201,7 @@ form a{
     color: hsl(188,47%,20%);
 }
 form a:hover{
-    color: hsla(44,0%,100%,0.4);
+    color: blue;
 }
 .submit{
     width: 30vw;
