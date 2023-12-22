@@ -1,3 +1,7 @@
+
+
+
+
 const form = document.querySelector(".form");
 const vericationForm = document.querySelectorAll(".emailvericationdivi");
 const email = document.querySelector("#email");
@@ -16,6 +20,8 @@ let random = (min = 10000, max = 99999) => {
 };
 
 const randomCode = random();
+
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -197,13 +203,15 @@ let resend = () => {
   };
   // https://half-geode-roundworm.glitch.me/api'
 
-  let f = fetch("https://d-amusement.glitch.me/vcode", options).catch((err) => {
+  let f = fetch("https://yielding-dented-amusement.glitch.me/resendfcode", options).catch((err) => {
     /*https://yielding-dented-amusement.glitch.me/api*/
   });
   vbloader[0].classList.add("adddedbloader");
   f.then((res) => res.json())
     .then((d) => {
-      vbloader[0].classList.remove("adddedbloader");
+      setTimeout(()=>{
+        vbloader[0].classList.remove("adddedbloader");
+      },3000)
     })
     .catch((err) => {
       if (err) {

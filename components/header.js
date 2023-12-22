@@ -82,12 +82,15 @@ class Navmenu extends HTMLElement{
 
 
            </div>
-           <div class="rules navhv">
-            <img src="/images/guidelines.png" alt="">
-            <p id="rb">Terms & conditions</p>
-
-
-           </div>`
+           <a href="/termsOfservice/terms.html" target="_blank">
+                        <div class="rules navhv">
+                            <img src="/images/guidelines.png" alt="">
+                            <p id="rb">Terms & Conditions</p>
+               
+               
+                           </div>
+            
+                      </a>`
     }
 }
 customElements.define('nav-menu',Navmenu);
@@ -224,7 +227,7 @@ class CandidateNavmenu extends HTMLElement{
            </div>
            <div class="rules navhv">
             <img src="/images/guidelines.png" alt="">
-            <p id="rb">Terms of service</p>
+            <p id="rb">Terms of use</p>
 
 
            </div>`

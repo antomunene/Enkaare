@@ -25,6 +25,16 @@ function checkPassword(password) {
     }
 }
 
+
+let checkv=sessionStorage.getItem("codesent");
+if(checkv===null){
+  console.log("kkkd")
+  window.open("/forgotpassword/verifyemail.html","_blank")
+  window.close();
+
+}else{
+  console.log("something to show")
+}
 function checkPasswords() {
  
     // Check if password1 is empty
@@ -96,6 +106,9 @@ function checkPasswords() {
 
           loader.classList.remove("addedloader");
           form.reset()
+
+          sessionStorage.removeItem("codesent");
+          sessionStorage.removeItem("dbtype")
 
           window.open("/login.html","_blank")
           window.close();
