@@ -1860,7 +1860,7 @@ let active = () => {
             </section>
             <section class="jbbids">
                 <div class="jbremin">
-                    <p class="jbp1">Applications</p>
+                <p class="jbp1">${appli +" "}Applications</p>
                     <p class="jbp2">Expires in ${posteddate.remaining.value+" "+posteddate.remaining.unit}</p>
     
                 </div>
