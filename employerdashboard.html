@@ -33,7 +33,7 @@
    
 
   <div class="invitesec">
-    <span onclick="invitecancel()"  id="suucanncel">&#x1F5D9;</span>
+    <span onclick="invitecancel()"  id="suucanncel">&times;</span>
     <div class="invitesecrealsec">
         <div class="invitesecloader">
             
@@ -66,7 +66,7 @@
     
     <div class="contactsupport">
         <div class="loader1"></div>
-        <span onclick="tsupportcancel()" id="suucanncel">&#x1F5D9;</span>
+        <span onclick="tsupportcancel()" id="suucanncel">&times;</span>
         <div class="innersupport">
             <section class="innersupport1">
                 <h1>Contact an enkaare<br> recruiter</h1>
@@ -120,7 +120,7 @@
 
                     
                 </div>
-                <img src="/images/greater-than-symbol (1).png" alt="greaterthan" id="gthanphone">
+                <img onclick="displaypoptionsp()" src="/images/greater-than-symbol (1).png" alt="greaterthan" id="gthanphone">
 
              </div>
             </div>
@@ -161,8 +161,8 @@
        
        
                      <a href="/candidates.html">
-                       <div onmouseover="hidepoptions()" class="aorders navhv">
-                           <img src="/images/profile.png" alt="">
+                       <div onclick="getRidOfOverlayWindows()" class="aorders navhv">
+                           <img src="/images/profile.png" alt="" id="canidateimg">
                            <p id="pb">Candidates</p>
               
                            
@@ -175,8 +175,8 @@
        
        
                       <a href="/myjoposts.html">
-                       <div onclick="orderd()" id="vague2" class="mbids navhv">
-                           <img src="/images/order-now.png" alt="">
+                       <div onclick="orderd();getRidOfOverlayWindows()" id="vague2" class="mbids navhv">
+                           <img src="/images/order-now.png" id="mypostedjobimg"  alt="">
                            <p id="pb">My posted jobs</p>
               
               
@@ -193,16 +193,16 @@
           
                       </div>
                   <!-- onclick="support('support','Support')"-->
-                      <div onclick="tsupport();suuemployer('employer_profile')" class="hcentre navhv">
-                       <img src="/images/support.png" alt="">
+                      <div onclick="tsupport();suuemployer('employer_profile'); getRidOfOverlayWindows()" class="hcentre navhv">
+                       <img src="/images/support.png" id="recruiterimg" alt="">
                        <p id="pb" class="contarec">Contact Recruiter</p>
                       
           
           
                       </div>
                       <a href="/termsOfservice/terms.html" target="_blank">
-                        <div class="rules navhv">
-                            <img src="/images/guidelines.png" alt="">
+                        <div onclick="getRidOfOverlayWindows()" class="rules navhv">
+                            <img src="/images/guidelines.png" id="termsimg" alt="">
                             <p id="rb">Terms & Conditions</p>
                
                
@@ -278,11 +278,17 @@
                             <div class="arrow" id="arrow"></div>
                         </div>
 
+                        <div onclick="checkempcompletecancel()" class="cancel-iconp">&times;</div>
 
-                        <div class="item">My Profile</div>
+
+                        <div class="item item1">My Profile</div>
                         <div class="item arrow1">➜</div>
                         <div class="item">Edit</div>
-                        <div onclick="checkempcompletecancel()" class="cancel-icon"><i class="fas fa-times"></i></div>
+                        <div onclick="checkempcompletecancel()" class="cancel-icon">&times;</i></div>
+
+                        <div class="arrow-containerp">
+                            <div class="arrow" id="arrow"></div>
+                        </div>
                     </section>
                     <div class="message-popout">
                       
@@ -375,6 +381,7 @@
 
             
                  </div>
+                
                 
                 </div>
 

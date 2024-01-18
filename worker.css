@@ -3244,3 +3244,1097 @@ background-color: hsla(188,47%,20%,0.8);
 .contactsupport #suucanncel:hover{
     color: red;
 }
+
+
+
+
+
+
+/*profile styling*/
+
+.bodyp{
+   width: 100vw;  
+
+    overflow-y: scroll;
+    height: 1;
+}
+.setp{
+    overflow-y: scroll;
+    height: 80vh;
+}
+.pph1{
+    margin: auto;
+    width: 93%;
+    display: flex;
+    
+    margin-top: 4vw;
+  
+    
+}
+
+
+.profileh1{
+   
+    width: 50%;
+    margin-top: 3vw;
+    font-size: 4vw; 
+
+    
+}
+.profsec{
+    margin: auto;
+    width: 93%;
+    height: 40vw;
+ 
+    margin-top: 3vw;
+    display: flex;
+
+}
+
+
+
+
+
+.profp {
+   
+    width: 20%;
+    height: 100%;
+}
+.pp{
+    margin-top: 12vw;
+    height: 12vw;
+    width: 12vw;
+    border: 1px solid hsla(188,47%,20%,0.3);
+    margin-left: 10%;
+
+   
+}
+.pdetails{
+  
+    width: 80%;
+    height: 100%;
+}
+.pdetails .name{
+  
+    height: 5vw;
+    display: flex;
+    margin-top: 8vw;
+    
+}
+.namein{
+   
+    height: 3vw;
+    display: flex;
+    width: 65vw;
+   
+    margin-left: 5%;
+}
+.name .nh21,.nh22,.payhr{
+    
+    height: 4vw;
+    margin-top: 0vw;
+    font-size: 3.7vw;
+   
+}
+
+
+.nh22{
+    margin-left: 5%;
+   
+ 
+}
+.jtitle{
+    font-size: 3.2vw;
+    margin-left: 5%;
+   
+}
+.pdetails button{
+    margin-left: 5%; 
+    width: 30vw;
+    height: 6vw;
+    font-size: 3.4vw;
+    border-radius: 1vw;
+    
+    /*#1B454B*/
+
+}
+.ddetails{
+ display: none;
+   
+}
+
+
+.ddetailsp{
+    margin: auto;
+    display: block;
+    margin-left: 4%;
+      width: 93%;
+      height: 25vw;
+     background-color: white;
+      margin-top: 4vw;
+     
+  }
+.ddp{
+   
+    height: 20vw;
+
+    border: 1px solid white;
+   
+}
+.ddp .avalb{
+    height: 4vw;
+    
+    display: flex;
+    margin-top: 3vw;
+    
+}
+#availit{
+    margin-top: 3vw;
+}
+.avalb h3{
+    
+    margin-top: 0vw;
+    font-size: 3.3vw;
+    margin-left: 5%;
+    width: 6vw;
+    
+}
+.payrate1{
+    display: none;
+}
+.avalb p{
+
+    
+    
+    margin-top: 0vw;
+    font-size: 3.2vw;
+    margin-left: 20vw;
+   
+    
+}
+.avalb .av{
+   
+    height: 4vw;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+    border: 1px solid hsl(188,47%,20%);
+    border-radius: 1vw;
+    font-size: 3vw;
+    margin-left: 20%;
+}
+.contacts{
+    height: 10vw;
+   
+     
+    width: 35vw;
+    margin-left: 3.5%;
+    margin-top: 2vw;
+}
+.contacarrier{
+   
+    height: 2.5vw;
+    display: flex;
+}
+.aboutp{
+   
+    margin: auto;
+    width: 93%;
+    height: 1;
+    margin-top: 5vw;
+    display: flex;
+   
+}
+.about{
+ 
+   
+    height: 1;
+    width: 100%;
+    background-color: white;
+}
+.about h3,.expe{
+  
+    text-align: center;
+    font-size: 3.6vw;
+    margin-top: 2vw;
+ 
+}
+.expe{
+  
+    margin: auto;
+    padding-top: 2vw;
+    width: 99%;
+    border-top: 2px solid hsl(37,48%,84%);
+   
+   
+}
+#ab{
+    margin-top: 2.5vw;
+}
+.about p{
+    line-height: 4.5vw;
+    font-size: 3.2vw;
+    width: 95%;
+   
+    margin: auto;
+    color: hsla(4,0%,0%,0.8);
+    
+    margin-left: 3%;
+    
+}
+.experience{
+   
+    height: 1;
+    margin-top: 1vw;
+}
+.expecarrier{
+  
+    height: 1;
+    margin-top: 2vw;
+  
+
+}
+#expech3{
+   text-align: left; 
+   font-size: 1.3vw;
+  
+   width: 95%;
+   
+    margin: auto;
+   
+   
+}
+#expech31{
+    text-align: left; 
+   font-size: 1.2vw;
+  
+   width: 95%;
+   color:  green;
+    margin: auto;
+    margin-top: 1vw;
+
+}
+#expecp{
+    font-size: 1vw;
+    margin-top: 0vw;
+    
+    font-weight: 600;
+    color: hsla(4,0%,0%,0.5);
+}
+.expeplast{
+    border-bottom: 2px solid hsl(37,48%,84%);
+}
+#langh3{
+  
+    margin: auto;
+    width: 94%;
+    margin-top: 2vw;
+   
+   
+}
+.profileedit{
+    /*border: 1px solid black;*/
+     height: 100vh;
+     position: absolute;
+     width: 100vw;
+      background-color: hsla(231,37%,36%,0.4);
+   /* display: none;*/
+    overflow-y: scroll;
+   margin-left: -100%;
+    transition-property: margin-left;
+    transition: 0.5s;
+     
+ 
+ }
+ 
+ .profileedit.addedprofileedit{
+     margin-left: 0%;
+ }
+ .cancleedit{
+   
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: black;
+      position: absolute;
+      margin-left: 82%;
+      width: 1vw;
+      height: 1vw;
+      margin-top: 1.3vw;
+      cursor: pointer;
+       font-size: 1.7vw;
+      
+ }
+ .cancleedit:hover{
+      color: red;
+ 
+ }
+ .editin{
+     /*border: 1px solid black;*/
+     margin: auto;
+     width: 70%;
+     height: 1;
+     background-color: hsl(36,43%,94%);
+    
+        
+     
+ }
+ .edith2{
+     font-size: 2vw;
+     margin-left: 5%;
+     margin-top: 2vw;
+ }
+ .edprofilep{
+     
+     margin: auto;
+     width: 90%;
+     height: 10vw;
+     display: flex;
+     background-color: white;
+ 
+ }
+ .wrapper{
+     border: 1px solid black;
+     width: 7vw;
+     height: 7vw;
+     margin-top: 1.5vw;
+     margin-left: 3%;
+    background-image: url("/images/user.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 50%;
+     
+ 
+ }
+ #input{
+     display: none;
+ }
+ .edprofilep label{
+     height: 2.5vw;
+     margin-top: 5vw;
+     width: 12vw;
+     margin-left: 6%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: hsl(188,47%,20%);
+     border-radius: 0.3vw;
+ }
+ .edprofilep label img{
+     height: 2vw;
+ }
+ .edprofilep label p{
+     font-weight: 700;
+     font-size: 1.2vw;
+     color: white;
+     margin-left: 4%;
+ }
+ .regu{
+     
+     margin: auto;
+     width: 90%;
+     margin-top: 3vw;
+     display: flex;
+ }
+ #efirstname,#etitle,#ecompanyname{
+     width: 28vw;
+     height: 2vw;
+     text-align: center;
+     font-size: 1.2vw;
+ }
+ #epalate{
+     border: 4px solid blue;
+     height: 10%;
+     
+ }
+ #ecountry{
+     width: 15vw;
+     height: 2.3vw;
+     color: hsla(4,0%,0%,0.6);
+     margin-left: 8%;
+    
+     font-size: 1.2vw;
+ }
+ #eexperinence{
+     width: 14vw;
+     height: 2.3vw;
+     color: hsla(4,0%,0%,0.6);
+    
+     font-size: 1.2vw;
+ }
+ #ecity{
+     width: 12.5vw;
+     height: 2vw;
+     color: hsla(4,0%,0%,0.6);
+     text-align: center;
+     font-size: 1.2vw;
+     margin-left: 1%;
+ }
+ #ecurrency{
+     width: 13vw;
+     height: 2.3vw;
+     color: hsla(4,0%,0%,0.6);
+     font-size: 1.2vw;
+     margin-left: 8%;
+ 
+ }
+ #epay{
+     width: 12.5vw;
+     height: 2vw;
+     color: hsla(4,0%,0%,0.6);
+     font-size: 1.2vw;
+     margin-left: 3.5%;
+ 
+ }
+ #esecondname{
+     width: 28vw;
+     height: 2vw;
+     margin-left: 8.3%;
+     text-align: center;
+     font-size: 1.2vw;
+ }
+ #eavailability{
+     width: 28.8vw;
+     height: 2.3vw;
+     margin-left: 8%;
+     text-align: center;
+     color: hsla(4,0%,0%,0.7);
+     font-size: 1.2vw;
+ }
+ #eabout{
+     font-size: 1.2vw;
+     width: 28.8vw;
+     font-family: 'Roboto', sans-serif;
+ }
+
+
+ /***********************************************/
+ 
+ .profileedit button{
+     width: 7vw;
+     height: 2.5vw;
+     margin-left: 85%;
+     margin-top: 2vw;
+     font-weight: 700;
+     font-size: 1.3vw;
+     background-color: hsl(188,47%,20%);
+     color: white;
+     border: 1px solid hsl(188,47%,20%);
+     border-radius: 0.3vw;
+     cursor: pointer;
+ }
+ .profileedit button:hover{
+ background-color: hsla(188,47%,20%,0.8);
+ }
+
+
+ 
+ /*here is the code to enquire about candidate*/
+ .enquire{
+   /* border: 1px solid  hsla(188,47%,20%,0.5);*/
+    height: 0vw;
+    width: 37vw;
+    /*position: absolute;*/
+    margin-left: 45.6%;
+    background-color: hsla(188,47%,20%,0.5);
+    transition: 0.7s;
+    transition-property: height;
+    overflow: hidden;
+  
+    
+ }
+ .enquire.addedenquire{
+    height: 22vw;
+ }
+ .enquire h3{
+   
+    margin-left: 10%;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    
+ }
+ #anyinformation{
+    margin-left: 10%;
+    font-size: 1.2vw;
+    font-family: 'Roboto', sans-serif;
+    width: 30vw;
+    height: 11vw;
+ }
+
+ /*******************************************************/
+ #enquirebut{
+    margin-left: 76%;
+    width: 7vw;
+    height: 2vw;
+    font-weight: 700;
+    font-size: 1vw;
+    margin-top: 0.5vw;
+    border: 1px solid hsl(188,47%,20%);
+    border-radius: 0.3vw;
+    color: white;
+    background: hsl(188,47%,20%);
+    cursor: pointer;
+
+ }
+ #enquirebut:hover{
+    background-color: whitesmoke;
+    color: hsl(188,47%,20%);
+
+ }
+ .sedingidi{
+    position: absolute;
+    margin-left: -20%;
+    margin-top: 12vw;
+    font-size: 1.2vw;
+    color: whitesmoke;
+ }
+
+
+ @media (max-width:500px){
+    /*profile styling*/
+
+.bodyp{
+    width: 100vw;  
+ 
+     overflow-y: scroll;
+     height: 1;
+ }
+ .setp{
+     overflow-y: scroll;
+     height: 80vh;
+ }
+ .pph1{
+     margin: auto;
+     width: 93%;
+     display: flex;
+     
+     margin-top: 4vw;
+   
+     
+ }
+ 
+ 
+ .profileh1{
+    
+     width: 50%;
+     margin-top: 3vw;
+     font-size: 4vw; 
+ 
+     
+ }
+ .profsec{
+     margin: auto;
+     width: 93%;
+     height: 40vw;
+  
+     margin-top: 3vw;
+     display: flex;
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ .profp {
+    
+     width: 20%;
+     height: 100%;
+ }
+ .pp{
+     margin-top: 12vw;
+     height: 12vw;
+     width: 12vw;
+     border: 1px solid hsla(188,47%,20%,0.3);
+     margin-left: 10%;
+ 
+    
+ }
+ .pdetails{
+   
+     width: 80%;
+     height: 100%;
+ }
+ .pdetails .name{
+   
+     height: 5vw;
+     display: flex;
+     margin-top: 8vw;
+     
+ }
+ .namein{
+    
+     height: 3vw;
+     display: flex;
+     width: 65vw;
+    
+     margin-left: 5%;
+ }
+ .name .nh21,.nh22,.payhr{
+     
+     height: 4vw;
+     margin-top: 0vw;
+     font-size: 3.7vw;
+    
+ }
+ 
+ 
+ .nh22{
+     margin-left: 5%;
+    
+  
+ }
+ .jtitle{
+     font-size: 3.2vw;
+     margin-left: 5%;
+    
+ }
+ .pdetails button{
+     margin-left: 5%; 
+     width: 30vw;
+     height: 6vw;
+     font-size: 3.4vw;
+     border-radius: 1vw;
+     
+     /*#1B454B*/
+ 
+ }
+ .ddetails{
+  display: none;
+    
+ }
+ 
+ 
+ .ddetailsp{
+     margin: auto;
+     display: block;
+     margin-left: 4%;
+       width: 93%;
+       height: 25vw;
+      background-color: white;
+       margin-top: 4vw;
+      
+   }
+ .ddp{
+    
+     height: 20vw;
+ 
+     border: 1px solid white;
+    
+ }
+ .ddp .avalb{
+     height: 4vw;
+     
+     display: flex;
+     margin-top: 3vw;
+     
+ }
+ #availit{
+     margin-top: 3vw;
+ }
+ .avalb h3{
+     
+     margin-top: 0vw;
+     font-size: 3.3vw;
+     margin-left: 5%;
+     width: 6vw;
+     
+ }
+ .payrate1{
+     display: none;
+ }
+ .avalb p{
+ 
+     
+     
+     margin-top: 0vw;
+     font-size: 3.2vw;
+     margin-left: 20vw;
+    
+     
+ }
+ .avalb .av{
+    
+     height: 4vw;
+     font-weight: 600;
+     background-color: green;
+     color: white;
+     border: 1px solid hsl(188,47%,20%);
+     border-radius: 1vw;
+     font-size: 3vw;
+     margin-left: 20%;
+ }
+ .contacts{
+     height: 10vw;
+    
+      
+     width: 35vw;
+     margin-left: 3.5%;
+     margin-top: 2vw;
+ }
+ .contacarrier{
+    
+     height: 2.5vw;
+     display: flex;
+ }
+ .aboutp{
+    
+     margin: auto;
+     width: 93%;
+     height: 1;
+     margin-top: 5vw;
+     display: flex;
+    
+ }
+ .about{
+  
+    
+     height: 1;
+     width: 100%;
+     background-color: white;
+ }
+ .about h3,.expe{
+   
+     text-align: center;
+     font-size: 3.6vw;
+     margin-top: 2vw;
+  
+ }
+ .expe{
+   
+     margin: auto;
+     padding-top: 2vw;
+     width: 99%;
+     border-top: 2px solid hsl(37,48%,84%);
+    
+    
+ }
+ #ab{
+     margin-top: 2.5vw;
+ }
+ .about p{
+     line-height: 4.5vw;
+     font-size: 3.2vw;
+     width: 95%;
+    
+     margin: auto;
+     color: hsla(4,0%,0%,0.8);
+     
+     margin-left: 3%;
+     
+ }
+ .experience{
+    
+     height: 1;
+     margin-top: 1vw;
+ }
+ .expecarrier{
+   
+     height: 1;
+     margin-top: 2vw;
+   
+ 
+ }
+ #expech3{
+    text-align: left; 
+    font-size: 1.3vw;
+   
+    width: 95%;
+    
+     margin: auto;
+    
+    
+ }
+ #expech31{
+     text-align: left; 
+    font-size: 1.2vw;
+   
+    width: 95%;
+    color:  green;
+     margin: auto;
+     margin-top: 1vw;
+ 
+ }
+ #expecp{
+     font-size: 1vw;
+     margin-top: 0vw;
+     
+     font-weight: 600;
+     color: hsla(4,0%,0%,0.5);
+ }
+ .expeplast{
+     border-bottom: 2px solid hsl(37,48%,84%);
+ }
+ #langh3{
+   
+     margin: auto;
+     width: 94%;
+     margin-top: 2vw;
+    
+    
+ }
+ .profileedit{
+     /*border: 1px solid black;*/
+      height: 100vh;
+      position: absolute;
+      width: 100vw;
+       background-color: hsla(231,37%,36%,0.4);
+    /* display: none;*/
+     overflow-y: scroll;
+    margin-left: -100%;
+     transition-property: margin-left;
+     transition: 0.5s;
+      
+  
+  }
+  
+  .profileedit.addedprofileedit{
+      margin-left: 0%;
+  }
+  .cancleedit{
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+       position: absolute;
+       margin-left: 82%;
+       width: 1vw;
+       height: 1vw;
+       margin-top: 1.3vw;
+       cursor: pointer;
+        font-size: 1.7vw;
+       
+  }
+  .cancleedit:hover{
+       color: red;
+  
+  }
+  .editin{
+      /*border: 1px solid black;*/
+      margin: auto;
+      width: 70%;
+      height: 1;
+      background-color: hsl(36,43%,94%);
+     
+         
+      
+  }
+  .edith2{
+      font-size: 2vw;
+      margin-left: 5%;
+      margin-top: 2vw;
+  }
+  .edprofilep{
+      
+      margin: auto;
+      width: 90%;
+      height: 10vw;
+      display: flex;
+      background-color: white;
+  
+  }
+  .wrapper{
+      border: 1px solid black;
+      width: 7vw;
+      height: 7vw;
+      margin-top: 1.5vw;
+      margin-left: 3%;
+     background-image: url("/images/user.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      
+  
+  }
+  #input{
+      display: none;
+  }
+  .edprofilep label{
+      height: 2.5vw;
+      margin-top: 5vw;
+      width: 12vw;
+      margin-left: 6%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(188,47%,20%);
+      border-radius: 0.3vw;
+  }
+  .edprofilep label img{
+      height: 2vw;
+  }
+  .edprofilep label p{
+      font-weight: 700;
+      font-size: 1.2vw;
+      color: white;
+      margin-left: 4%;
+  }
+  .regu{
+      
+      margin: auto;
+      width: 90%;
+      margin-top: 3vw;
+      display: flex;
+  }
+  #efirstname,#etitle,#ecompanyname{
+      width: 28vw;
+      height: 2vw;
+      text-align: center;
+      font-size: 1.2vw;
+  }
+  #epalate{
+      border: 4px solid blue;
+      height: 10%;
+      
+  }
+  #ecountry{
+      width: 15vw;
+      height: 2.3vw;
+      color: hsla(4,0%,0%,0.6);
+      margin-left: 8%;
+     
+      font-size: 1.2vw;
+  }
+  #eexperinence{
+      width: 14vw;
+      height: 2.3vw;
+      color: hsla(4,0%,0%,0.6);
+     
+      font-size: 1.2vw;
+  }
+  #ecity{
+      width: 12.5vw;
+      height: 2vw;
+      color: hsla(4,0%,0%,0.6);
+      text-align: center;
+      font-size: 1.2vw;
+      margin-left: 1%;
+  }
+  #ecurrency{
+      width: 13vw;
+      height: 2.3vw;
+      color: hsla(4,0%,0%,0.6);
+      font-size: 1.2vw;
+      margin-left: 8%;
+  
+  }
+  #epay{
+      width: 12.5vw;
+      height: 2vw;
+      color: hsla(4,0%,0%,0.6);
+      font-size: 1.2vw;
+      margin-left: 3.5%;
+  
+  }
+  #esecondname{
+      width: 28vw;
+      height: 2vw;
+      margin-left: 8.3%;
+      text-align: center;
+      font-size: 1.2vw;
+  }
+  #eavailability{
+      width: 28.8vw;
+      height: 2.3vw;
+      margin-left: 8%;
+      text-align: center;
+      color: hsla(4,0%,0%,0.7);
+      font-size: 1.2vw;
+  }
+  #eabout{
+      font-size: 1.2vw;
+      width: 28.8vw;
+      font-family: 'Roboto', sans-serif;
+  }
+ 
+ 
+  /***********************************************/
+  
+  .profileedit button{
+      width: 7vw;
+      height: 2.5vw;
+      margin-left: 85%;
+      margin-top: 2vw;
+      font-weight: 700;
+      font-size: 1.3vw;
+      background-color: hsl(188,47%,20%);
+      color: white;
+      border: 1px solid hsl(188,47%,20%);
+      border-radius: 0.3vw;
+      cursor: pointer;
+  }
+  .profileedit button:hover{
+  background-color: hsla(188,47%,20%,0.8);
+  }
+ 
+ 
+  
+  /*here is the code to enquire about candidate*/
+  .enquire{
+    /* border: 1px solid  hsla(188,47%,20%,0.5);*/
+     height: 0vw;
+     width: 37vw;
+     /*position: absolute;*/
+     margin-left: 45.6%;
+     background-color: hsla(188,47%,20%,0.5);
+     transition: 0.7s;
+     transition-property: height;
+     overflow: hidden;
+   
+     
+  }
+  .enquire.addedenquire{
+     height: 22vw;
+  }
+  .enquire h3{
+    
+     margin-left: 10%;
+     font-family: 'Roboto', sans-serif;
+     color: whitesmoke;
+     font-size: 1.5vw;
+     line-height: 2vw;
+     
+  }
+  #anyinformation{
+     margin-left: 10%;
+     font-size: 1.2vw;
+     font-family: 'Roboto', sans-serif;
+     width: 30vw;
+     height: 11vw;
+  }
+ 
+  /*******************************************************/
+  #enquirebut{
+     margin-left: 76%;
+     width: 7vw;
+     height: 2vw;
+     font-weight: 700;
+     font-size: 1vw;
+     margin-top: 0.5vw;
+     border: 1px solid hsl(188,47%,20%);
+     border-radius: 0.3vw;
+     color: white;
+     background: hsl(188,47%,20%);
+     cursor: pointer;
+ 
+  }
+  #enquirebut:hover{
+     background-color: whitesmoke;
+     color: hsl(188,47%,20%);
+ 
+  }
+  .sedingidi{
+     position: absolute;
+     margin-left: -20%;
+     margin-top: 12vw;
+     font-size: 1.2vw;
+     color: whitesmoke;
+  }
+ 
+ 
+ }
