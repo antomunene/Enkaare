@@ -54,7 +54,7 @@ const getCookie = (name) => {
 
 // Function to delete a cookie
 function deleteCookie(name) {
-  const domain = ".enkaare.co"; // Replace with your actual domain
+  const domain = ".127.0.0.1:5500"; // Replace with your actual domain
   const pastDate = new Date(0).toUTCString();
   try {
     document.cookie = `${name}=; expires=${pastDate}; path=/; domain=${domain}`;
@@ -83,7 +83,7 @@ let updateonlinestatus=(status)=>{
     headers: {
       "Authorization": `Bearer ${token}`,
       "Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "https://enkaare.co",
+      "Access-Control-Allow-Origin": baseUrl,
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept, authorization",
       "Access-Control-Allow-Methods": "POST",
@@ -242,6 +242,7 @@ let navmenu = () => {
 };
 
 let setprofile = () => {
+  let phoneProfilePicture=document.querySelector("#logo");
   let namediv = document.getElementById("ppname");
   //   let firstnmae = localStorage.getItem("pfname");
   //   let secname = localStorage.getItem("psname");
@@ -282,9 +283,12 @@ let setprofile = () => {
     .then((d) => {
       if (d[0].file === "noprofile") {
       } else {
+
         const imageex = "data:image/png;base64,";
         let ppimage = document.getElementsByClassName("img");
         ppimage[0].style.backgroundImage = `url('${imageex + d[0].file}')`;
+
+       phoneProfilePicture.src=`${imageex + d[0].file}`
       }
     })
     .catch((err) => {
@@ -493,6 +497,7 @@ let candidates = () => {
 
         jobinvitbtclicked.addEventListener("click", (e) => {
           let invitesec = document.getElementsByClassName("invitesec");
+          getRidOfOverlayWindows()
           invitesec[0].classList.add("addedinvitesec");
           //   let userdi = localStorage.getItem("userloged");
           let userdi = getCookie("userloged");
@@ -1860,7 +1865,7 @@ let active = () => {
             </section>
             <section class="jbbids">
                 <div class="jbremin">
-                <p class="jbp1">${appli +" "}Applications</p>
+                    <p class="jbp1">${appli +" "}Applications</p>
                     <p class="jbp2">Expires in ${posteddate.remaining.value+" "+posteddate.remaining.unit}</p>
     
                 </div>
@@ -2253,7 +2258,7 @@ let jbid = sessionStorage.getItem("jobpostid");
       let candidates = document.getElementsByClassName("candidatelist")[0];
       var candidate = document.createElement("div");
       var carditems = `<div class="empty-message">
-        <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
+                   <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
         <div class="empty-text">Oops! No Results Found</div>
        
     </div>`;
@@ -2318,8 +2323,10 @@ let jbid = sessionStorage.getItem("jobpostid");
                    </div>
                
                   <div class="bidshiresec">
+
+                  <div class="setoverflow">
                     
-                    <div class="hirethreebuttons">
+                     <div class="hirethreebuttons">
                         <section></section>
                         <section></section>
                         <section></section>
@@ -2338,6 +2345,9 @@ let jbid = sessionStorage.getItem("jobpostid");
                         </div>
                         
                     </div>
+                    </div>
+
+
                     <div class="hirepart">
                         <p id="hirepp">${payarr[0] + payarr[1] + "/hr"}</p>
                         <div class="hirebutton">
@@ -2418,8 +2428,9 @@ let jbid = sessionStorage.getItem("jobpostid");
                    </div>
                
                   <div class="bidshiresec">
+                  <div class="setoverflow">
                     
-                    <div class="hirethreebuttons">
+                     <div class="hirethreebuttons">
                         <section></section>
                         <section></section>
                         <section></section>
@@ -2437,6 +2448,7 @@ let jbid = sessionStorage.getItem("jobpostid");
 
                         </div>
                         
+                    </div>
                     </div>
                     <div class="hirepart">
                         <p id="hirepp">${payarr[0] + payarr[1] + "/hr"}</p>
@@ -2482,19 +2494,49 @@ let jbid = sessionStorage.getItem("jobpostid");
         window.location.href = "/candidateprofile.html";
       });
     }
+
+
+
+
+/*
+    const hireb=document.getElementsByClassName("hirethreebuttons");
+    
+    const cancelJobSection=document.getElementsByClassName("canclejobsec");
+  
+    for(let i=0;i<hireb.length;i++){
+    
+      let clickedb=hireb[i];
+      clickedb.addEventListener('click',()=>{
+        
+        cancelJobSection[i].classList.toggle('addncc');
+        console.log(cancelJobSection);
+        
+    
+    
+    
+      })
+    }*/
+
+
+
+
+
+
     // here will be a code to add profile to shortlist
     let shortlist = document.querySelectorAll(".cancelappl");
     for (let i = 0; i < shortlist.length; i++) {
       let addtoshortlist = shortlist[i];
       addtoshortlist.addEventListener("click", (e) => {
         let value =
-          addtoshortlist.parentElement.parentElement.parentElement.parentElement
-            .firstElementChild.innerHTML;
+          addtoshortlist.parentElement.parentElement.parentElement.parentElement.parentElement.firstElementChild.innerHTML;
+    
+
+           
 
         let bclicked = addtoshortlist.children[1].innerHTML;
         if (bclicked === "Add to Shortlist") {
       let jbid = sessionStorage.getItem("jobpostid");
-          
+      
 
           const formdata = new FormData();
           formdata.append("job_id", jbid);
@@ -2534,6 +2576,9 @@ let jbid = sessionStorage.getItem("jobpostid");
             .catch((err) => {
               console.log(err);
             });
+
+
+          
         } else {
         }
       });
@@ -2702,7 +2747,7 @@ let shortlist = () => {
       let candidates = document.getElementsByClassName("candidatelist")[0];
       var candidate = document.createElement("div");
       var carditems = `<div class="empty-message">
-        <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
+                   <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
         <div class="empty-text">Oops! No Results Found</div>
        
     </div>`;
@@ -2824,8 +2869,9 @@ let shortlist = () => {
                    </div>
                
                   <div class="bidshiresec">
+                  <div class="setoverflow">
                     
-                    <div class="hirethreebuttons">
+                     <div class="hirethreebuttons">
                         <section></section>
                         <section></section>
                         <section></section>
@@ -2846,6 +2892,8 @@ let shortlist = () => {
                         </div>
                         
                     </div>
+                    </div>
+
                     <div  class="hirepart">
                         <p id="hirepp">${payarr[0] + payarr[1] + "/hr"}</p>
                         <div  class="hirebutton">
@@ -2974,8 +3022,9 @@ let shortlist = () => {
                    </div>
                
                   <div class="bidshiresec">
+                  <div class="setoverflow">
                     
-                    <div class="hirethreebuttons">
+                     <div class="hirethreebuttons">
                         <section></section>
                         <section></section>
                         <section></section>
@@ -2996,6 +3045,8 @@ let shortlist = () => {
                         </div>
                         
                     </div>
+                    </div>
+
                     <div   class="hirepart">
                         <p id="hirepp">${payarr[0] + payarr[1] + "/hr"}</p>
                         <div class="hirebutton">
@@ -3050,8 +3101,8 @@ let shortlist = () => {
 
           console.log("Yessssss")
           let value =
-            addtoshortlist.parentElement.parentElement.parentElement
-              .parentElement.firstElementChild.innerHTML;
+          addtoshortlist.parentElement.parentElement.parentElement.parentElement.parentElement.firstElementChild.innerHTML;
+    
 
           let bclicked = addtoshortlist.children[1].innerHTML;
           if (bclicked === "Remove") {
@@ -3267,7 +3318,7 @@ let invites = () => {
       let candidates = document.getElementsByClassName("candidatelist")[0];
       var candidate = document.createElement("div");
       var carditems = `<div class="empty-message">
-        <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
+                   <img id="empty-icon" src="/images/empty-folder.png" alt="empty-folder">
         <div class="empty-text">Oops! No Results Found</div>
        
     </div>`;
@@ -4422,6 +4473,10 @@ let profload = () => {
       let experience = document.getElementById("experience");
       let aboutme = document.getElementById("abme");
       let workh = document.getElementById("workh");
+      let locationp =document.getElementsByClassName("plocation");
+      let experiencep =document.getElementsByClassName("experiencep");
+      let workh2 = document.getElementsByClassName("workh");
+      let payrate2 = document.getElementsByClassName("payrate1");
 
       id.innerHTML = userid;
       firstname.innerHTML = d[1].first_name;
@@ -4434,9 +4489,13 @@ let profload = () => {
       payrate1.innerHTML = " ";
 
       location.innerHTML = d[1].city + "," + d[1].country;
+      locationp[0].innerHTML=d[1].city + "," + d[1].country;
       experience.innerHTML = d[1].experience_in_years + " years";
+      experiencep[0].innerHTML= d[1].experience_in_years + " years";
       aboutme.innerHTML = d[1].about;
       workh.innerHTML = d[1].availability;
+      workh2[0].innerHTML = d[1].availability;
+
 
       let jobexperience = document.getElementsByClassName("experience")[0];
 
@@ -4532,7 +4591,14 @@ let postjobbutton=()=>{
   
 if(comornot==="no"){
   
-      document.getElementsByClassName("incompleteprofile")[0].classList.add("adddincompleteprofile");
+      try {
+        document.getElementsByClassName("incompleteprofile")[0].classList.add("adddincompleteprofile");
+        
+      } catch (error) {
+
+        alert("You are  not allowed to post a job until you complete your profile.");
+        
+      }
 
  
 }else{
@@ -6047,3 +6113,49 @@ let tsupport = () => {
 let tsupportcancel = () => {
   document.querySelector(".contactsupport").classList.remove("addedhove");
 };
+
+
+//CODES to run mobile version
+let huberger =document.getElementsByClassName("navbutton");
+let phonenav=document.getElementsByClassName("phonenavmenu");
+let pop=()=>{
+    huberger[0].classList.toggle("active");
+   phonenav[0].classList.toggle("addedphonemenu");
+
+   let poptions = document.getElementsByClassName("poptions");
+   poptions[0].classList.remove("addpoptionsp");
+    
+}
+
+let displaypoptionsp = () => {
+  let poptions = document.getElementsByClassName("poptions");
+  poptions[0].classList.toggle("addpoptionsp");
+
+  huberger[0].classList.remove("active");
+   phonenav[0].classList.remove("addedphonemenu");
+
+};
+
+function getRidOfOverlayWindows(){
+  huberger[0].classList.remove("active");
+  phonenav[0].classList.remove("addedphonemenu");
+  let poptions = document.getElementsByClassName("poptions");
+  poptions[0].classList.remove("addpoptionsp");
+
+}
+
+const jobQuickLinks =()=>{
+  
+  const jQuickLinks= document.getElementsByClassName("jbquicklinks");
+ 
+
+  jQuickLinks[0].classList.toggle("addedjblinks");
+
+}
+
+
+
+
+
+
+
