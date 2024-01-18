@@ -104,7 +104,7 @@ try {
           
           
                       </div>
-                      <a href="/termsOfservice/terms.html" target="_blank">
+                      <a href="/clientTermsandConditions/terms.html" target="_blank">
                         <div onclick="getRidOfOverlayWindows()" class="rules navhv">
                             <img src="/images/guidelines.png" id="termsimg" alt="">
                             <p id="rb">Terms & Conditions</p>
@@ -264,12 +264,13 @@ try {
     
     
                </div>
-               <div class="rules navhv">
+               <a href="/terms and conditions/term.html"> <div class="rules navhv">
                 <img src="/images/guidelines.png" alt="">
-                <p id="rb">Terms of use</p>
-    
-    
-               </div>`
+                <p id="rb">Terms and conditions</p>
+   
+   
+               </div>
+            </a>`
         }
     }
     
