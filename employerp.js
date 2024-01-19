@@ -5955,7 +5955,7 @@ let emailcode = () => {
                 ).catch((err) => {
                   console.log(err);
                 });
-                f.then((res) => res.json()).then((d) => {
+                fetchChangeEmail.then((res) => res.json()).then((d) => {
                   const {affectedrows} = d;
 
                   if (affectedrows) {
