@@ -2180,8 +2180,15 @@ iframe{
     height: 1;
     margin: auto;
     width: 93%;
-    margin-top: 2vw;
+    overflow-y: scroll;
+    height: 72vh;
+    padding-bottom: 2vw;
 }
+#draft{
+    display: none;
+}
+
+
 .jobspcarrier{
     
     height: 5vw;
@@ -5501,8 +5508,12 @@ select{
     margin: auto;
     width: 93%;
     margin-top: 2vw;
+    height: 60vh;
+   
+   
     
 }
+
 
 .jobspcarrier{
     

@@ -6122,6 +6122,12 @@ let tsupportcancel = () => {
   document.querySelector(".contactsupport").classList.remove("addedhove");
 };
 
+let termsservice= ()=>{
+  
+
+}
+ 
+
 
 //CODES to run mobile version
 let huberger =document.getElementsByClassName("navbutton");
