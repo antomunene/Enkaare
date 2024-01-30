@@ -167,31 +167,57 @@ try {
             super();
         }
         connectedCallback(){
-            this.innerHTML=` <a href="https://www.enkaare.com"><img src="/images/enkari logo.jpg" alt=""></a>
+            this.innerHTML=`<a href="https://www.enkaare.com"><img id="employerdlogo" src="/images/enkari logo.jpg" alt=""></a>
             <div onmouseover="hidepoptions()" class="status">
-                <p>Acount status </p>
+                <div onclick="pop()" class="navbutton">
+                    <div class="nav"></div>
+                    <div class="nav"></div>
+                    <div class="nav"></div>
+                </div>
+
+
+                <p>Account status </p>
                 <button id="statusbuton"></button>
                 <span id="cbeta">Beta</span>
+
+                
+             <div class="phoneprofilenav">
+                <div class="logo-container">
+                    <img src="/images/profileuser.png" alt="Logo" id="logo">
+
+                    
+                </div>
+                <img onclick="displaypoptionsp()" src="/images/greater-than-symbol (1).png" alt="greaterthan" id="gthanphone">
+
+             </div>
             </div>
+
+
+
             <div onmouseover="displaypoptions()" class="profile navhv" id="myprofile">
                 <section class="img">
-    
+
                 </section>
                 <p id="ppname"></p>
                 <span class="gt">
                     <img src="/images/greater-than-symbol (1).png" alt="">
                 </span>
-    
+
             </div>
+
+
+
+             <!--Phone nav menu-->
+            <div class="phonenavmenu">
             <div onmouseover="hidepoptions()" class="balance navhv">
              <img src="/images/wallet.png" alt="">
              <p id="pb">Balance</p>
-    
+
              <p id="bp">$0.0</p>
             
                 
                 
-    
+
             </div>
             <a href="/notification.html">
                 <div onclick="changesource('/notification.html')" class="notification navhv">
@@ -200,15 +226,15 @@ try {
        
                     <p id="np"></p>
                    
-                       
+                   
                        
        
                    </div>
             </a>
-    
-    
+
+
               <a href="/availableorders.html">
-              <div onclick="changesource('/availableorders.html')"  onmouseover="hidepoptions()"   class="aorders navhv">
+                <div onclick="changesource('/availableorders.html')"  onmouseover="hidepoptions()"   class="aorders navhv">
                     <img src="/images/clipboard.png" alt="">
                     <p id="pb">Available jobs</p>
        
@@ -219,8 +245,8 @@ try {
        
                    </div>
               </a>
-    
-    
+
+
                <a href="/myorders.html">
                 <div onclick="orderd()" id="vague2" class="mbids navhv">
                     <img src="/images/add-user.png" alt="">
@@ -229,8 +255,8 @@ try {
        
                    </div>
                </a>
-    
-    
+
+
              <a href="/acceptedjobs.html">
                 <div  class="abids navhv">
                     <img src="/images/archive.png" alt="">
@@ -241,36 +267,40 @@ try {
                        
                    </div>
              </a>
-    
+
                <div onclick="chats()"  class="chats navhv">
                 <img src="/images/chat.png" alt="">
                 <p id="pb">Chats</p>
                 <p id="ac"></p>
-    
+   
                </div>
                <div onclick="thhhh()" class="rating navhv">
                 <img src="/images/star.png" alt="">
                 <p id="pb">Rating</p>
-    
+   
                 <p id="rp">100%</p>
                
                    
                    
-    
+   
                </div>
-               <div  onclick="tsupport();suuemployer('candidate_profile')"  class="hcentre navhv">
+               <!--onclick="support('support','Support')"-->
+               <div  onclick="tsupport();suuemployer('candidate_profile')"   class="hcentre navhv">
                 <img src="/images/support.png" alt="">
                 <p id="pb">Contact Recruiter</p>
-    
-    
-               </div>
-               <a href="/terms and conditions/term.html"> <div class="rules navhv">
-                <img src="/images/guidelines.png" alt="">
-                <p id="rb">Terms and conditions</p>
    
    
                </div>
-            </a>`
+              <a href="/terms and conditions/term.html">
+                <div class="rules navhv">
+                    <img src="/images/guidelines.png" alt="">
+                    <p id="rb">Terms and Conditions</p>
+       
+       
+                   </div>
+              </a>
+
+        </div> `
         }
     }
     

@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head> 
 <head> 
@@ -30,7 +30,7 @@
 
     <div class="contactsupport">
         <div class="loader1"></div>
-        <span onclick="tsupportcancel()" id="suucanncel">&#x1F5D9;</span>
+        <span onclick="tsupportcancel()" id="suucanncel">&times;</span>
         <div class="innersupport">
             <section class="innersupport1">
                 <h1>Contact an enkaare<br> recruiter</h1>
@@ -64,12 +64,33 @@
     
     <div class="main">
         <div class="navbar">
-            <a href="https://www.enkaare.com"><img src="/images/enkari logo.jpg" alt=""></a>
+            <a href="https://www.enkaare.com"><img id="employerdlogo" src="/images/enkari logo.jpg" alt=""></a>
             <div onmouseover="hidepoptions()" class="status">
-                <p>Acount status </p>
+                <div onclick="pop()" class="navbutton">
+                    <div class="nav"></div>
+                    <div class="nav"></div>
+                    <div class="nav"></div>
+                </div>
+
+
+                <p>Account status </p>
                 <button id="statusbuton"></button>
                 <span id="cbeta">Beta</span>
+
+                
+             <div class="phoneprofilenav">
+                <div class="logo-container">
+                    <img src="/images/profileuser.png" alt="Logo" id="logo">
+
+                    
+                </div>
+                <img onclick="displaypoptionsp()" src="/images/greater-than-symbol (1).png" alt="greaterthan" id="gthanphone">
+
+             </div>
             </div>
+
+
+
             <div onmouseover="displaypoptions()" class="profile navhv" id="myprofile">
                 <section class="img">
 
@@ -80,6 +101,11 @@
                 </span>
 
             </div>
+
+
+
+             <!--Phone nav menu-->
+            <div class="phonenavmenu">
             <div onmouseover="hidepoptions()" class="balance navhv">
              <img src="/images/wallet.png" alt="">
              <p id="pb">Balance</p>
@@ -172,6 +198,10 @@
               </a>
 
         </div>
+        </div>
+
+
+
         <div onmouseleave="hidepoptions()" class="poptions">
           <a href="/profile.html">
             <section class="myprofile">
@@ -252,27 +282,31 @@
                  
 
 
+                
                  <div class="incompleteprofile">
                     <section class="horizontal-section">
                         <div class="arrow-container">
                             <div class="arrow" id="arrow"></div>
                         </div>
 
+                        <div onclick="checkempcompletecancel()" class="cancel-iconp">&times;</div>
 
-                        <div class="item">My Profile</div>
+
+                        <div class="item item1">My Profile</div>
                         <div class="item arrow1">➜</div>
                         <div class="item">Edit</div>
-                        <div onclick="incompltepopmes()" class="cancel-icon"><i class="fas fa-times"></i></div>
+                        <div onclick="checkempcompletecancel()" class="cancel-icon">&times;</i></div>
+
+                        <div class="arrow-containerp">
+                            <div class="arrow" id="arrow"></div>
+                        </div>
                     </section>
                     <div class="message-popout">
-                       
+                      
                         
                         <p class="messagepp">You're a step away towards landing your dream job. Complete your profile to see the available jobs!</p>
                     </div>
-                  
-                    <script>
-
-                    </script>
+    
 
                  </div>
 
@@ -284,6 +318,7 @@
                     <div class="interview-container">
                         
                         <!-- 
+                            
                        
                         <div class="rowscarrier">
                            
@@ -365,6 +400,7 @@
                       <input type="text" name="" id="" placeholder="Search">
                 
                      </div>
+                     <img class="searchicon" src="/images/search-2904.png" alt="search">
             
                  </div>
 
