@@ -2423,13 +2423,14 @@ header{
         display: block;
         font-family: 'Roboto', sans-serif;
         font-size: 3.2vw;
-        line-height: 3.4vw;
+        line-height: 3.7vw;
             
         
     }
     .aboutus .aboutusdesk span{
       
         display: none;
+        
       
             
         
@@ -2519,7 +2520,7 @@ header{
         display: block;
         font-family: 'Roboto', sans-serif;
         font-size:3vw;
-        line-height: 3.4vw;
+        line-height: 3.8vw;
 
     }
 
