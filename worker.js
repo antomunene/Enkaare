@@ -1524,6 +1524,7 @@ let displaypoptions =()=>{
         achive.value=d[1].about;
  
         years_experience.value=d[1].experience_in_years;
+        experincesarray.length = 0;
  
  
         experincesarray=experincesarray.concat(d[2]);
