@@ -3406,6 +3406,7 @@ background-color: hsla(188,47%,20%,0.8);
             height: 100%;
             display: block;
             border-radius: 50%;
+           margin-top: 0vw;
         }
         #gthanphone{
             height: 6vw;
@@ -3612,7 +3613,8 @@ background-color: hsla(188,47%,20%,0.8);
             
             height: 58vh;
            padding-bottom: 3vw;
-           border: 1px solid green;
+          
+           
            
            
            

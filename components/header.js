@@ -167,7 +167,7 @@ try {
             super();
         }
         connectedCallback(){
-            this.innerHTML=`<a href="https://www.enkaare.com"><img id="employerdlogo" src="/images/enkari logo.jpg" alt=""></a>
+            this.innerHTML=` <a href="https://www.enkaare.com"><img id="employerdlogo" src="/images/enkari logo.jpg" alt=""></a>
             <div onmouseover="hidepoptions()" class="status">
                 <div onclick="pop()" class="navbutton">
                     <div class="nav"></div>
@@ -234,7 +234,7 @@ try {
 
 
               <a href="/availableorders.html">
-                <div onclick="changesource('/availableorders.html')"  onmouseover="hidepoptions()"   class="aorders navhv">
+                <div onclick="getRidOfOverlayWindows()" onmouseover="hidepoptions()"   class="aorders navhv">
                     <img src="/images/clipboard.png" alt="">
                     <p id="pb">Available jobs</p>
        
@@ -248,7 +248,7 @@ try {
 
 
                <a href="/myorders.html">
-                <div onclick="orderd()" id="vague2" class="mbids navhv">
+                <div onclick="orderd();getRidOfOverlayWindows()" id="vague2" class="mbids navhv">
                     <img src="/images/add-user.png" alt="">
                     <p id="pb">My Jobs</p>
        
@@ -258,7 +258,7 @@ try {
 
 
              <a href="/acceptedjobs.html">
-                <div  class="abids navhv">
+                <div   class="abids navhv">
                     <img src="/images/archive.png" alt="">
                     <p id="pb">Accepted Jobs</p>
        
@@ -285,14 +285,14 @@ try {
    
                </div>
                <!--onclick="support('support','Support')"-->
-               <div  onclick="tsupport();suuemployer('candidate_profile')"   class="hcentre navhv">
+               <div  onclick="tsupport();suuemployer('candidate_profile');getRidOfOverlayWindows()"   class="hcentre navhv">
                 <img src="/images/support.png" alt="">
                 <p id="pb">Contact Recruiter</p>
    
    
                </div>
               <a href="/terms and conditions/term.html">
-                <div class="rules navhv">
+                <div onclick="getRidOfOverlayWindows()" class="rules navhv">
                     <img src="/images/guidelines.png" alt="">
                     <p id="rb">Terms and Conditions</p>
        
@@ -300,7 +300,7 @@ try {
                    </div>
               </a>
 
-        </div> `
+        </div>`
         }
     }
     

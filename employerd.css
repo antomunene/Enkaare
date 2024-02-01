@@ -3314,6 +3314,9 @@ label {
         background-color: #0056b3;
     }
 
+
+
+
 /*JOB POST STYLING STARTS HER*/
 .jbody{
    
@@ -3520,6 +3523,11 @@ label {
     font-size: 1.4vw;
     border-bottom: 2px solid hsla(4,0%,0%,0.5);
 }
+
+
+
+
+
 #company{
     color: purple;
     font-weight: 700;
@@ -3538,7 +3546,7 @@ label {
 #country{
     color: hsla(4,0%,0%,0.6);
    width: 12vw;
-    margin-left: 3%;
+    margin-left: 8%;
     margin-top: 3.3vw;
     height: 2vw;
     border: transparent;
@@ -3563,7 +3571,7 @@ input:focus,select:focus{
 }
 #usstates,#canadaprovence{
     width: 10vw;
-    margin-left: 1.6vw;
+    margin-left: 2vw;
     margin-top: 3.3vw;
     height: 2vw;
     border: transparent;
@@ -3593,12 +3601,18 @@ select{
     margin-left: 2%;
 }
 #state{
-  margin-left: 1.6vw;
+  margin-left: 2vw;
+  
+
+  
 }
 #rate{
     margin-left: 2%; 
     width: 8.2vw;
     color: hsla(4,0%,0%,0.7);
+}
+.setlocationinputsp{
+    display: flex;
 }
  #currency{
     width: 17vw;
@@ -3627,6 +3641,9 @@ select{
  .jbfbutton:hover{
     background-color: hsla(188,47%,20%,0.7);
 
+ }
+ .resbr{
+    display: flex;
  }
 
  #jbsummary,#responsibility{
@@ -7401,6 +7418,425 @@ select{
     }
     
     
+/*******************************************************/
+
+    
+/*JOB POST STYLING STARTS HER*/
+.jbody{
+   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   background-color: white;
+    font-family: 'Roboto', sans-serif;
+    overflow-y: scroll;
+    
+    height: 1;
+   
+    -ms-overflow-style: none;
+  
+    
+}
+#jballelements{
+    height: 100vh;
+}
+.pjorderdetails{
+   
+    width: 99.85vw;
+    height: 100vh;
+    position: absolute;
+  
+  
+
+   
+  
+   
+    
+   
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(188,47%,20%,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+   
+
+}
+#loader1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(188,47%,20%,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+.loader::after,#loader1::after{
+    content: "";
+    width: 5vw;
+    height: 5vw;
+    border: 0.8vw solid white;
+    border-top: 0.8vw solid hsl(188,47%,20%);
+    border-radius: 50%;
+    animation: loading 0.7s ease infinite;
+    opacity: 1;
+    
+   
+}
+
+
+.loader.addedloader{
+    display: flex;
+    opacity: 1;
+}
+.loader1.addedloaderyes{
+    display: flex;
+    opacity: 1; 
+}
+@keyframes loading {
+    from{transform: rotate(0turn);}
+    to{transform: rotate(1turn);}
+}
+
+.pjorderdetails.addedodetails{
+   margin-left: 0%;
+   
+
+}
+.pjodbody{
+    border: 1px solid hsla(188,47%,20%,0.5);
+    overflow-y: scroll;
+    width: 80%;
+    scrollbar-width: none;
+}
+.pjodbody::-webkit-scrollbar{
+    display: none;
+}
+
+.pjorderdetails::-webkit-scrollbar{
+    display: none;
+}
+.pjdetailsbutton{
+    
+    width: 10%;
+}
+
+.pjbutton1{
+    height: 5vw;
+    width: 15vw;
+    font-size: 3.2vw;
+    margin-top: 3vw;
+    margin-left: 10%;
+    border-radius: 1vw;
+    display: absolute;
+}
+.pjbutton2{
+    height: 5vw;
+    width: 18vw;
+    font-size: 3.2vw;
+    margin-top: 90vh;
+    margin-left: -115%;
+    border-radius: 1vw;
+    display: absolute;
+}
+
+.pjbutton1:hover,.pjbutton2:hover{
+    background-color: hsla(188,47%,20%,0.7);
+}
+.pjbutton1 img{
+    height: 2vw;
+}
+
+
+
+
+.jbmain{
+    
+    display: block;
+    
+}
+
+.jbsidebar{
+    width: 100%;
+   
+    height: 34vw;
+    background-color: hsl(188,47%,20%);
+}
+.jbsidebar img{
+   
+    height: 10vw;
+    margin-top: 5vw;
+    margin-left: 45%;
+}
+.jsdp{
+    
+  
+    width: 80%;
+    line-height: 4vw;
+    font-size: 2.8vw;
+    margin-top: 2vw;
+    letter-spacing: 0.2vw;
+    
+
+}
+.jbformpart{
+    
+    width: 100%;
+}
+.jbfph3{
+   margin-top: 3vw;
+    margin-left: 3%;
+    font-size: 3.2vw;
+   
+}
+.forminnerconte{
+
+
+  border-top: 1px solid hsl(36,43%,90%);
+    margin: auto;
+    width: 95%;
+    height: 224vw;
+    margin-top: 1vw;
+    border-bottom: 1px solid hsl(36,43%,90%);
+
+    
+}
+
+#title,#jbtype,#pjbenefits,#skill,#company,#department{
+    width: 85vw;
+    margin-left: 5%;
+    margin-top: 5vw;
+    height: 7vw;
+    /*text-align: center;*/
+    
+    font-size: 3.2vw;
+    border-bottom: 1px solid hsla(4,0%,0%,0.5);
+  
+}
+.setlocationinputsp{
+    display: flex;
+}
+
+#company{
+    color: purple;
+    font-weight: 700;
+}
+#skill{
+   width: 62vw;
+}
+#jbtype{
+    margin-top: 5vw;
+    color: hsla(188,47%,20%,0.7);
+    width: 86.5vw;
+}
+#pjbenefits,#department{
+    width: 85vw;
+}
+
+#country{
+    color: hsla(4,0%,0%,0.6);
+   width: 36vw;
+    margin-left: 5%;
+    margin-top: 5vw;
+    height: 7vw;
+    border: transparent;
+    /*text-align: center;*/
+    font-size: 3.2vw;
+    border-bottom: 1px solid hsla(4,0%,0%,0.5)
+   
+    
+}
+#compdepart{
+   margin-top: 1.5vw;
+   
+    
+ }
+input:focus,select:focus{
+    outline-width: 0vw;
+    outline: none;
+   /* outline-color: hsl(207,52%,44%);*/
+    border: 1px solid hsl(207,52%,44%);
+    /*border-top: 1px solid transparent;*/
+}
+.firstsecf{
+    display: block;
+}
+
+
+#usstates,#canadaprovence{
+    width: 20vw;
+    margin-left: 2vw;
+    margin-top: 5vw;
+    height: 7vw;
+    /*text-align: center;*/
+    font-size: 3.2vw;
+    border-bottom: 1px solid hsla(4,0%,0%,0.5);
+    display: none;
+   
+}
+#usstates{
+    width: 23vw;
+}
+#canadaprovence{
+    margin-left: 6%;
+}
+
+#state,#city,#pay,#rate{
+    width: 20vw;
+    margin-left: 4%;
+    margin-top: 4vw;
+    height: 7vw;
+    border: transparent;
+    /*text-align: center;*/
+    font-size: 3.2vw;
+    border-bottom: 1px solid hsla(4,0%,0%,0.5);
+    /*border: 1px solid black;*/
+}
+select{
+    background-color: white;
+}
+#pay{
+    width: 20vw;
+    margin-left: 2%;
+    margin-top: 4vw;
+   
+}
+#state{
+  margin-left: 2vw;
+  margin-top: 4vw;
+  width: 22vw;
+  
+}
+#rate{
+    margin-left: 2%; 
+    width: 22vw;
+    margin-top: 5vw;
+   
+}
+ #currency{
+    width: 40vw;
+    margin-left: 5%;
+    margin-top: 5vw;
+    height: 7vw;
+    /*text-align: center;*/
+    font-size: 3.2vw;
+    border-bottom: 1px solid hsla(4,0%,0%,0.5);
+    color: hsla(188,47%,20%,0.7);
+    
+ }
+
+ .jbfbutton{
+    height: 6vw;
+    width: 20vw;
+    margin-left: 2%;
+    font-weight: 700;
+    font-size: 3.1vw;
+    border-radius: 1vw;
+    
+ }
+ .selectcurrency-brp{
+    display:flex;
+    
+    margin-top: 5vw;
+ }
+ 
+ 
+ .resbr{
+    display: block;
+ }
+
+ #jbsummary,#responsibility{
+    margin-left: 5%;
+    margin-top: 4vw;
+    font-size: 3.2vw;
+    padding: 2vw;
+   /* display: block;*/
+    width: 83vw;
+    height: 30vw;
+    font-family: sans-serif;
+    border: 1px solid hsla(188,47%,20%,0.5);
+ }
+ #responsibility{
+    margin-left: 5%;
+ }
+ 
+ .skillsdiv{
+    
+    margin-top: 1vw;
+    display: block;
+ }
+ .skillsdivcar{
+    border: 1px solid hsla(4,0%,0%,0.5);
+    height: 20vw;
+    width: 86vw;
+    margin-left: 5%;
+   margin-top: 5vw;
+
+    
+ }
+ textarea{
+    font-family: 'Roboto', sans-serif;
+ }
+
+ textarea:focus{
+    outline-width: 0vw;
+    outline: none;
+    
+ }
+ .skillsdivcar::-webkit-scrollbar{
+     display: none;
+ }
+ .skillit{
+    margin-top: 1vw;
+    height: 5vw ;
+    margin-left: 1%;
+  
+    
+   
+ }
+ .skillit p{
+    font-weight: 700;
+    margin-top: 1vw;
+    font-size: 3vw;
+    color: hsla(188,47%,20%,0.5);
+    width: 79vw;
+    text-align: center;
+    
+    
+
+ }
+ .pcancel{
+    height: 1.2vw;
+    width: 1.2vw;
+    margin-top: 1.6vw;
+    
+ }
+ .pcancel:hover{
+    background-color: hsla(188,47%,20%,0.4);
+ }
+ #ffsubmit{
+    height: 6vw;
+    margin-left: 70%;
+    margin-top: 3vw;
+    width: 25vw;
+    font-weight: 700;
+    font-size: 3.2vw;
+    border-radius: 1vw;
+ }
+
+
+
+
 
 
 
