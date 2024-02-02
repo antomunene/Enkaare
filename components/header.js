@@ -176,7 +176,7 @@ try {
                 </div>
 
 
-                <p>Account status </p>
+                <p>Acount status </p>
                 <button id="statusbuton"></button>
                 <span id="cbeta">Beta</span>
 
@@ -207,7 +207,7 @@ try {
 
 
 
-             <!--Phone nav menu-->
+
             <div class="phonenavmenu">
             <div onmouseover="hidepoptions()" class="balance navhv">
              <img src="/images/wallet.png" alt="">
@@ -234,7 +234,7 @@ try {
 
 
               <a href="/availableorders.html">
-                <div onclick="getRidOfOverlayWindows()" onmouseover="hidepoptions()"   class="aorders navhv">
+                <div onclick="getRidOfOverlayWindows()"  onmouseover="hidepoptions()"   class="aorders navhv">
                     <img src="/images/clipboard.png" alt="">
                     <p id="pb">Available jobs</p>
        
@@ -258,7 +258,7 @@ try {
 
 
              <a href="/acceptedjobs.html">
-                <div   class="abids navhv">
+                <div  class="abids navhv">
                     <img src="/images/archive.png" alt="">
                     <p id="pb">Accepted Jobs</p>
        
@@ -319,26 +319,24 @@ try {
             super();
         }
         connectedCallback(){
-            this.innerHTML=`<a href="/profile.html">
-            <section class="myprofile">
+            this.innerHTML=` <a href="/profile.html">
+            <section onclick="getRidOfOverlayWindows()" class="myprofile">
                 <img src="/images/user.png" alt="">
                 <p>My profile</p>
     
                </section>
           </a>
-    
-          <a href="/settings.html">
-          <section class="myprofile">
-              <img src="/images/settings.png" alt="">
-              <p>Settings</p>
-    
-             </section>
-         </a>
-    
+      <a href="/settings.html">
+        <section onclick="getRidOfOverlayWindows()" class="myprofile">
+            <img src="/images/settings.png" alt="">
+            <p>Settings</p>
+
+           </section>
+      </a>
            <section onclick="logout()" class="myprofile">
             <img src="/images/logout.png" alt="">
             <p>Logout</p>
-    
+
            </section>`
         }
     }
