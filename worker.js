@@ -2514,7 +2514,7 @@ let myapporders = () => {
 
       for (let i = 0; i < orderarray.length; i++) {
         let title = orderarray[i].job_title;
-        let name = orderarray[i].company_name;
+       
         let city = orderarray[i].city;
         let country = orderarray[i].country;
         let bids = orderarray[i].submits;
@@ -2541,7 +2541,7 @@ let myapporders = () => {
                
                 <h3>${title}</h3>
                 <div class="cname">
-                   <h4 class="ch31">${name}</h4> 
+                   <h4 class="ch31"></h4> 
                    <p class="ch32"> ${city},</p>
                    <p class="ch32">${country}</p>
                 </div>
