@@ -374,7 +374,7 @@ let candidates = () => {
     
                   <div class="approvalr">
                     <h3 id="aprateh3">${rate}%</h3>
-                    <p>Aprroval Rate</p>
+                    <p>Approval Rate</p>
                   </div>
               </div>
               
@@ -440,7 +440,7 @@ let candidates = () => {
     
                   <div class="approvalr">
                     <h3 id="aprateh3">${rate}%</h3>
-                    <p>Aprroval Rate</p>
+                    <p>Approval Rate</p>
                   </div>
               </div>
               
@@ -2309,7 +2309,7 @@ let jbid = sessionStorage.getItem("jobpostid");
 
                   <div class="approvalr">
                     <h3 id="aprateh3">${rate}%</h3>
-                    <p>Aprroval Rate</p>
+                    <p>Approval Rate</p>
                   </div>
               </div>
               
@@ -2414,7 +2414,7 @@ let jbid = sessionStorage.getItem("jobpostid");
 
                   <div class="approvalr">
                     <h3 id="aprateh3">${rate}%</h3>
-                    <p>Aprroval Rate</p>
+                    <p>Approval Rate</p>
                   </div>
               </div>
               
@@ -2853,7 +2853,7 @@ let shortlist = () => {
 
                   <div class="approvalr">
                     <h3 id="aprateh3">${rate}%</h3>
-                    <p>Aprroval Rate</p>
+                    <p>Approval Rate</p>
                   </div>
               </div>
               
@@ -3006,7 +3006,7 @@ let shortlist = () => {
 
                   <div class="approvalr">
                     <h3 id="aprateh3">${rate}%</h3>
-                    <p>Aprroval Rate</p>
+                    <p>Approval Rate</p>
                   </div>
               </div>
               
@@ -3291,7 +3291,7 @@ let invites = () => {
              
                        <div class="approvalr">
                          <h3 id="aprateh3">${rate}%</h3>
-                         <p>Aprroval Rate</p>
+                         <p>Approval Rate</p>
                        </div>
                    </div>
                    
@@ -3368,7 +3368,7 @@ let invites = () => {
           
                     <div class="approvalr">
                       <h3 id="aprateh3">${rate}%</h3>
-                      <p>Aprroval Rate</p>
+                      <p>Approval Rate</p>
                     </div>
                 </div>
                 
@@ -3436,7 +3436,7 @@ let invites = () => {
           
                     <div class="approvalr">
                       <h3 id="aprateh3">${rate}%</h3>
-                      <p>Aprroval Rate</p>
+                      <p>Approval Rate</p>
                     </div>
                 </div>
                 

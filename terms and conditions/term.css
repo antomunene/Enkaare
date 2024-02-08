@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+
 }
 
 header {
@@ -20,11 +21,12 @@ main{
   display: flex;
   height: 90vw;
   
+  
 
 }
 .navlinks{
  
- /* border: 1px solid black;*/
+ /* border: 1px solid black;  */
   width: 25%;
 }
 .navlinks a{
@@ -33,7 +35,7 @@ main{
 }
 .links{
   font-size: 1.2vw;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
   color: hsl(188, 47%, 20%);
   margin-left: 18%;
   margin-top: 0.3vw;
@@ -60,7 +62,7 @@ main{
 
 section {
 
-  /*border: 1px solid black;*/
+  /* border: 1px solid black; */
   max-width: 80%;
 
   padding: 20px;
