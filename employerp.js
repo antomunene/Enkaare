@@ -4,7 +4,7 @@ let token = localStorage.getItem("token");
 
 
 
-const baseUrl = "https://enkaare-staging.glitch.me";
+const baseUrl = "https://yielding-dented-amusement.glitch.me";
 // let formdata = new FormData();
 
 const options = {
@@ -298,6 +298,28 @@ let setprofile = () => {
 
 //Candidates START HERE
 
+
+function processFullName(fullName) {
+  // Split the full name into individual names
+  const names = fullName.split(" ");
+  
+
+  // Extract the last name (surname)
+  const surname = names[names.length - 1];
+  
+
+  // Get the first character of each name (excluding the last name)
+  const initials = names
+    .slice(0, -1)
+    .map((name) => name[0])
+    .join("");
+
+  // Combine the surname and initials
+  const result = surname + (initials.length > 0 ? " " + initials : "");
+
+  return result;
+}
+
 let darray;
 let inviteclickedpid;
 
@@ -363,7 +385,7 @@ let candidates = () => {
     
                       <div class="js">
                         <h3 id="cadph3">${
-                          first_name + " " + second_name.slice(0, 1)
+                          processFullName(first_name + " " + second_name)
                         }</h3>
                       <p id="cadp">${isonline}</p>
                       </div>
@@ -429,7 +451,7 @@ let candidates = () => {
     
                       <div class="js">
                         <h3 id="cadph3">${
-                          first_name + " " + second_name.slice(0, 1)
+                          processFullName(first_name + " " + second_name)
                         }</h3>
                       <p id="cadp">${isonline}</p>
                       </div>
@@ -463,6 +485,15 @@ let candidates = () => {
           candidates.append(candidate);
         }
       }
+
+
+      const spacer=`<div class="spacer">
+                        
+       </div>`
+       let candidates = document.getElementsByClassName("candidatelist")[0];
+      candidate.innerHTML = spacer;
+      candidates.append(candidate);
+
       //code to ditermine whether the profile is online or not
       let ondiv = document.getElementsByClassName("online");
       for (let i = 0; i < ondiv.length; i++) {
@@ -2298,7 +2329,7 @@ let jbid = sessionStorage.getItem("jobpostid");
 
                       <div class="js">
                         <h3 id="cadph3">${
-                          first_name + " " + second_name.slice(0, 1)
+                          processFullName(first_name + " " + second_name)
                         }</h3>
                       <p id="cadp">${isonline}</p>
                       </div>
@@ -2403,7 +2434,7 @@ let jbid = sessionStorage.getItem("jobpostid");
 
                       <div class="js">
                         <h3 id="cadph3">${
-                          first_name + " " + second_name.slice(0, 1)
+                          processFullName(first_name + " " + second_name)
                         }</h3>
                       <p id="cadp">${isonline}</p>
                       </div>
@@ -2842,7 +2873,7 @@ let shortlist = () => {
 
                       <div class="js">
                         <h3 id="cadph3">${
-                          first_name + " " + second_name.slice(0, 1)
+                          processFullName(first_name + " " + second_name)
                         }</h3>
                       <p id="cadp">${isonline}</p>
                       </div>
@@ -2995,7 +3026,7 @@ let shortlist = () => {
 
                       <div class="js">
                         <h3 id="cadph3">${
-                          first_name + " " + second_name.slice(0, 1)
+                          processFullName(first_name + " " + second_name)
                         }</h3>
                       <p id="cadp">${isonline}</p>
                       </div>
@@ -3136,7 +3167,7 @@ let shortlist = () => {
           
           //https://half-geode-roundworm.glitch.me/api
           
-          let f= fetch('https://enkaare-staging.glitch.me/removeshortlist',options).catch(err =>{
+          let f= fetch('https://yielding-dented-amusement.glitch.me/removeshortlist',options).catch(err =>{
             
           
           });
@@ -3357,7 +3388,7 @@ let invites = () => {
           
                         <div class="js">
                           <h3 id="cadph3">${
-                            first_name + " " + second_name.slice(0, 1)
+                            processFullName(first_name + " " + second_name)
                           }</h3>
                         <p id="cadp">${isonline}</p>
                         </div>
@@ -3425,7 +3456,7 @@ let invites = () => {
           
                         <div class="js">
                           <h3 id="cadph3">${
-                            first_name + " " + second_name.slice(0, 1)
+                            processFullName(first_name + " " + second_name)
                           }</h3>
                         <p id="cadp"></p>
                         </div>
@@ -4638,7 +4669,7 @@ let postjobform=()=>{
 
   }
 
-  let f= fetch('https://enkaare-staging.glitch.me/companyname',optionsa).catch(err =>{
+  let f= fetch('https://yielding-dented-amusement.glitch.me/companyname',optionsa).catch(err =>{
        console.log(err)    
      
 });
@@ -4876,7 +4907,7 @@ let statename;
  
         //https://half-geode-roundworm.glitch.me/api
          
-         let f= fetch('https://enkaare-staging.glitch.me/postjob',options).catch(err =>{
+         let f= fetch('https://yielding-dented-amusement.glitch.me/postjob',options).catch(err =>{
            
      
      });
@@ -4943,7 +4974,7 @@ let statename;
  
         //https://half-geode-roundworm.glitch.me/api
          
-         let f= fetch('https://enkaare-staging.glitch.me/postjob',options).catch(err =>{
+         let f= fetch('https://yielding-dented-amusement.glitch.me/postjob',options).catch(err =>{
            
      
      });
