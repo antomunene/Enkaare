@@ -378,8 +378,8 @@ document.getElementById("form").addEventListener('submit', (e) =>{
     };
    // https://half-geode-roundworm.glitch.me/api'
     
-    let f= fetch('https://enkaare-staging.glitch.me/vcode',options).catch(err =>{
-      /*https://enkaare-staging.glitch.me/api*/
+    let f= fetch('https://yielding-dented-amusement.glitch.me/vcode',options).catch(err =>{
+      /*https://yielding-dented-amusement.glitch.me/api*/
   });
 
 
@@ -513,7 +513,7 @@ verificationInputs.forEach((input, index) => {
 
        //https://half-geode-roundworm.glitch.me/api
         
-        let f= fetch('https://enkaare-staging.glitch.me/register',options).catch(err =>{
+        let f= fetch('https://yielding-dented-amusement.glitch.me/register',options).catch(err =>{
           
     
     });
@@ -653,8 +653,8 @@ let resend=()=>{
     };
    // https://half-geode-roundworm.glitch.me/api'
     
-    let f= fetch('https://enkaare-staging.glitch.me/vcode',options).catch(err =>{
-      /*https://enkaare-staging.glitch.me/api*/
+    let f= fetch('https://yielding-dented-amusement.glitch.me/vcode',options).catch(err =>{
+      /*https://yielding-dented-amusement.glitch.me/api*/
   });
   vbloader[0].classList.add("adddedbloader");
   f.then(res => res.json()).then(d =>{
@@ -728,8 +728,8 @@ if(email.value===""){
     };
    // https://half-geode-roundworm.glitch.me/api'
     
-    let f= fetch('https://enkaare-staging.glitch.me/vcode',options).catch(err =>{
-      /*https://enkaare-staging.glitch.me/api*/
+    let f= fetch('https://yielding-dented-amusement.glitch.me/vcode',options).catch(err =>{
+      /*https://yielding-dented-amusement.glitch.me/api*/
   });
   vbloader[0].classList.add("adddedbloader");
   f.then(res => res.json()).then(d =>{

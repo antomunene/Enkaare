@@ -1,4 +1,4 @@
-const baseUrl = "https://enkaare-staging.glitch.me";
+const baseUrl = "https://yielding-dented-amusement.glitch.me";
 // let formdata = new FormData();
 
 let token = localStorage.getItem("token");
@@ -252,6 +252,29 @@ let logout = () => {
   });*/
 };
 
+
+
+
+function processFullName(fullName) {
+  // Split the full name into individual names
+  const names = fullName.split(" ");
+
+
+  // Extract the last name (surname)
+  const surname = names[names.length - 1];
+
+
+  // Get the first character of each name (excluding the last name)
+  const initials = names
+    .slice(0, -1)
+    .map((name) => name[0])
+    .join("");
+
+  // Combine the surname and initials
+  const result = surname + (initials.length > 0 ? " " + initials : "");
+
+  return result;
+}
 let setprofile = () => {
   candinddateaccountstatus();
   let phoneProfilePicture=document.querySelector("#logo");
@@ -261,7 +284,7 @@ let setprofile = () => {
   let firstnmae = getCookie("pfname");
   let secname = getCookie("psname");
 
-  namediv.innerHTML = firstnmae + "  " + secname.slice(0, 1);
+  namediv.innerHTML = processFullName(firstnmae + "  " + secname);
 
   /*infomation for profile picture notificaations and messanges*/
 
@@ -491,6 +514,15 @@ let availableorders = () => {
         orderlist.append(order);
       }
       loader[0].classList.remove("addedloader");
+
+
+      let orderlist = document.getElementsByClassName("orderslist")[0];
+      const spacer=`<div class="spacer">
+      </div>`;
+      var order = document.createElement("div");
+      order.innerHTML = spacer;
+        orderlist.append(order);
+
       //here is the code for seeorder
       let buttonclicked = document.getElementsByClassName("orderbutton");
       for (let i = 0; i < buttonclicked.length; i++) {
@@ -946,6 +978,15 @@ function invitedorders() {
       orderlist.append(order);
     }
     loader[0].classList.remove("addedloader");
+
+
+    let orderlist = document.getElementsByClassName("orderslist")[0];
+      const spacer=`<div class="spacer">
+      </div>`;
+      var order = document.createElement("div");
+      order.innerHTML = spacer;
+        orderlist.append(order);
+
     //here is the code for seeorder
     let buttonclicked = document.getElementsByClassName("orderbutton");
     for (let i = 0; i < buttonclicked.length; i++) {
@@ -1020,7 +1061,7 @@ let displaypoptions =()=>{
         body: formdata
    }
  
-   let f=fetch("https://enkaare-staging.glitch.me/candidateprofile",options).catch(err=>{
+   let f=fetch("https://yielding-dented-amusement.glitch.me/candidateprofile",options).catch(err=>{
     console.log(err);
    });
    loader[0].classList.add("addedloader");
@@ -1296,7 +1337,7 @@ let displaypoptions =()=>{
         body:formdata
     }
  
-    let f=fetch("https://enkaare-staging.glitch.me/imageupload",options).catch(err=>{
+    let f=fetch("https://yielding-dented-amusement.glitch.me/imageupload",options).catch(err=>{
         console.log(err);
     })
  
@@ -1390,7 +1431,7 @@ let displaypoptions =()=>{
             body:formdata
         }
  
-        let f=fetch("https://enkaare-staging.glitch.me/editcp",options).catch(err=>{
+        let f=fetch("https://yielding-dented-amusement.glitch.me/editcp",options).catch(err=>{
             console.log(err)
         })
         
@@ -1444,7 +1485,7 @@ let displaypoptions =()=>{
     body:formdata
  }
  
- let f=fetch("https://enkaare-staging.glitch.me/geteditdata",options).catch(err=>{
+ let f=fetch("https://yielding-dented-amusement.glitch.me/geteditdata",options).catch(err=>{
     console.log(err);
  })
  
@@ -1625,6 +1666,25 @@ let displaypoptions =()=>{
             wholecarrier.scroll({
                 top:0,
                 behavior:"smooth"
+            });
+
+          }else if (startdate.value > enddate.value) {
+            // Checking if end date is less than
+            satartdinavalid[1].style.display = "block";
+            dcarrier[1].style.borderBottom = "1px solid red";
+        
+            wholecarrier.scroll({
+              top: 0,
+              behavior: "smooth",
+            });
+          } else if (startdate.value == enddate.value) {
+            // checking if end date is equal to start date
+            satartdinavalid[1].style.display = "block";
+            dcarrier[1].style.borderBottom = "1px solid red";
+        
+            wholecarrier.scroll({
+              top: 0,
+              behavior: "smooth",
             });
  
           } else if(country.value===""){
@@ -2199,7 +2259,7 @@ let displaypoptions =()=>{
  
    //https://half-geode-roundworm.glitch.me/api
     
-    let f= fetch('https://enkaare-staging.glitch.me/sedetails',options).catch(err =>{
+    let f= fetch('https://yielding-dented-amusement.glitch.me/sedetails',options).catch(err =>{
        
  
  });
@@ -2270,7 +2330,7 @@ let displaypoptions =()=>{
  
    //https://half-geode-roundworm.glitch.me/api
     
-    let sf= fetch('https://enkaare-staging.glitch.me/sedetails',soptions).catch(err =>{
+    let sf= fetch('https://yielding-dented-amusement.glitch.me/sedetails',soptions).catch(err =>{
       
  
  });
@@ -2324,7 +2384,7 @@ let displaypoptions =()=>{
          body:formdata
      }
  
-     let f=fetch("https://enkaare-staging.glitch.me/apply",options).catch(err=>{
+     let f=fetch("https://yielding-dented-amusement.glitch.me/apply",options).catch(err=>{
          console.log(err)
      })
      loader[0].classList.add("addedloader");
@@ -2368,7 +2428,7 @@ let displaypoptions =()=>{
              body:formdata
          }
      
-         let f=fetch("https://enkaare-staging.glitch.me/apply",options).catch(err=>{
+         let f=fetch("https://yielding-dented-amusement.glitch.me/apply",options).catch(err=>{
              console.log(err)
          })
          loader[0].classList.add("addedloader");
@@ -2410,7 +2470,7 @@ let displaypoptions =()=>{
              body:formdata
          }
      
-         let f=fetch("https://enkaare-staging.glitch.me/acceptinvite",options).catch(err=>{
+         let f=fetch("https://yielding-dented-amusement.glitch.me/acceptinvite",options).catch(err=>{
  
             console.log(err)
               
