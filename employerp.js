@@ -4,7 +4,7 @@ let token = localStorage.getItem("token");
 
 
 
-const baseUrl = "https://yielding-dented-amusement.glitch.me";
+const baseUrl = "https://enkaare-staging.glitch.me";
 // let formdata = new FormData();
 
 const options = {
@@ -3171,7 +3171,7 @@ let shortlist = () => {
           
           //https://half-geode-roundworm.glitch.me/api
           
-          let f= fetch('https://yielding-dented-amusement.glitch.me/removeshortlist',options).catch(err =>{
+          let f= fetch('https://enkaare-staging.glitch.me/removeshortlist',options).catch(err =>{
             
           
           });
@@ -4673,7 +4673,7 @@ let postjobform=()=>{
 
   }
 
-  let f= fetch('https://yielding-dented-amusement.glitch.me/companyname',optionsa).catch(err =>{
+  let f= fetch('https://enkaare-staging.glitch.me/companyname',optionsa).catch(err =>{
        console.log(err)    
      
 });
@@ -4911,7 +4911,7 @@ let statename;
  
         //https://half-geode-roundworm.glitch.me/api
          
-         let f= fetch('https://yielding-dented-amusement.glitch.me/postjob',options).catch(err =>{
+         let f= fetch('https://enkaare-staging.glitch.me/postjob',options).catch(err =>{
            
      
      });
@@ -4978,7 +4978,7 @@ let statename;
  
         //https://half-geode-roundworm.glitch.me/api
          
-         let f= fetch('https://yielding-dented-amusement.glitch.me/postjob',options).catch(err =>{
+         let f= fetch('https://enkaare-staging.glitch.me/postjob',options).catch(err =>{
            
      
      });

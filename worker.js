@@ -1,4 +1,4 @@
-const baseUrl = "https://yielding-dented-amusement.glitch.me";
+const baseUrl = "https://enkaare-staging.glitch.me";
 // let formdata = new FormData();
 
 let token = localStorage.getItem("token");
@@ -1061,7 +1061,7 @@ let displaypoptions =()=>{
         body: formdata
    }
  
-   let f=fetch("https://yielding-dented-amusement.glitch.me/candidateprofile",options).catch(err=>{
+   let f=fetch("https://enkaare-staging.glitch.me/candidateprofile",options).catch(err=>{
     console.log(err);
    });
    loader[0].classList.add("addedloader");
@@ -1337,7 +1337,7 @@ let displaypoptions =()=>{
         body:formdata
     }
  
-    let f=fetch("https://yielding-dented-amusement.glitch.me/imageupload",options).catch(err=>{
+    let f=fetch("https://enkaare-staging.glitch.me/imageupload",options).catch(err=>{
         console.log(err);
     })
  
@@ -1431,7 +1431,7 @@ let displaypoptions =()=>{
             body:formdata
         }
  
-        let f=fetch("https://yielding-dented-amusement.glitch.me/editcp",options).catch(err=>{
+        let f=fetch("https://enkaare-staging.glitch.me/editcp",options).catch(err=>{
             console.log(err)
         })
         
@@ -1485,7 +1485,7 @@ let displaypoptions =()=>{
     body:formdata
  }
  
- let f=fetch("https://yielding-dented-amusement.glitch.me/geteditdata",options).catch(err=>{
+ let f=fetch("https://enkaare-staging.glitch.me/geteditdata",options).catch(err=>{
     console.log(err);
  })
  
@@ -2250,7 +2250,7 @@ let displaypoptions =()=>{
  
    //https://half-geode-roundworm.glitch.me/api
     
-    let f= fetch('https://yielding-dented-amusement.glitch.me/sedetails',options).catch(err =>{
+    let f= fetch('https://enkaare-staging.glitch.me/sedetails',options).catch(err =>{
        
  
  });
@@ -2321,7 +2321,7 @@ let displaypoptions =()=>{
  
    //https://half-geode-roundworm.glitch.me/api
     
-    let sf= fetch('https://yielding-dented-amusement.glitch.me/sedetails',soptions).catch(err =>{
+    let sf= fetch('https://enkaare-staging.glitch.me/sedetails',soptions).catch(err =>{
       
  
  });
@@ -2375,7 +2375,7 @@ let displaypoptions =()=>{
          body:formdata
      }
  
-     let f=fetch("https://yielding-dented-amusement.glitch.me/apply",options).catch(err=>{
+     let f=fetch("https://enkaare-staging.glitch.me/apply",options).catch(err=>{
          console.log(err)
      })
      loader[0].classList.add("addedloader");
@@ -2419,7 +2419,7 @@ let displaypoptions =()=>{
              body:formdata
          }
      
-         let f=fetch("https://yielding-dented-amusement.glitch.me/apply",options).catch(err=>{
+         let f=fetch("https://enkaare-staging.glitch.me/apply",options).catch(err=>{
              console.log(err)
          })
          loader[0].classList.add("addedloader");
@@ -2461,7 +2461,7 @@ let displaypoptions =()=>{
              body:formdata
          }
      
-         let f=fetch("https://yielding-dented-amusement.glitch.me/acceptinvite",options).catch(err=>{
+         let f=fetch("https://enkaare-staging.glitch.me/acceptinvite",options).catch(err=>{
  
             console.log(err)
               
