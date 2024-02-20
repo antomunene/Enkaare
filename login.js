@@ -27,7 +27,7 @@ const options = {
 
 //https://half-geode-roundworm.glitch.me/api
 
-let f = fetch("https://enkaare-staging.glitch.me/get", options).catch((err) => {
+let f = fetch("https://yielding-dented-amusement.glitch.me/get", options).catch((err) => {
   console.log("There is error fetching data: ", err);
 });
 
@@ -97,9 +97,9 @@ form.addEventListener("submit", (e) => {
   // https://1ed2-105-231-144-76.ngrok.io/api'
 
   //https://half-geode-roundworm.glitch.me/api
-  //https://enkaare-staging.glitch.me
+  //https://yielding-dented-amusement.glitch.me
 
-  let f = fetch("https://enkaare-staging.glitch.me/login", options).catch((err) => {});
+  let f = fetch("https://yielding-dented-amusement.glitch.me/login", options).catch((err) => {});
   loader[0].classList.add("addedloader");
 
   f.then((res) => res.json())
