@@ -71,7 +71,7 @@ let tsupport = () => {
         body: formdata,
       };
   
-      let f = fetch(`https://yielding-dented-amusement.glitch.me/supporttalklandingp`, optionWithFormData).catch((err) => {
+      let f = fetch(`https://enkaare-staging.glitch.me/supporttalklandingp`, optionWithFormData).catch((err) => {
         console.log(err);
       });
       sendmess.innerHTML="Sending...."

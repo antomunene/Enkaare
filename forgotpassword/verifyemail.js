@@ -55,7 +55,7 @@ form.addEventListener("submit", (e) => {
   //use this https://github.com/Danities316/Enkaare.git
 
   let fetchVerifyEmail = fetch(
-    "https://yielding-dented-amusement.glitch.me/verifyemail",
+    "https://enkaare-staging.glitch.me/verifyemail",
     options
   ).catch((err) => {
     console.log(err);
@@ -203,8 +203,8 @@ let resend = () => {
   };
   // https://half-geode-roundworm.glitch.me/api'
 
-  let f = fetch("https://yielding-dented-amusement.glitch.me/resendfcode", options).catch((err) => {
-    /*https://yielding-dented-amusement.glitch.me/api*/
+  let f = fetch("https://enkaare-staging.glitch.me/resendfcode", options).catch((err) => {
+    /*https://enkaare-staging.glitch.me/api*/
   });
   vbloader[0].classList.add("adddedbloader");
   f.then((res) => res.json())
