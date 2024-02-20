@@ -83,7 +83,7 @@ function checkPasswords() {
     };
 
     let fetchResetPassword = fetch(
-      "https://yielding-dented-amusement.glitch.me/forgetpassword",
+      "https://enkaare-staging.glitch.me/forgetpassword",
       options
     ).catch((err) => {
       console.log("There is an error fetching data: ", err);
