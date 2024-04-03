@@ -1070,7 +1070,7 @@ iframe{
     margin-top: 2vw;
     background-color: white;
     border-radius: 0.3vw;
-    display: flex;
+    display: none;
     
 }
 .searchicon{
